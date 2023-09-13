@@ -18,7 +18,35 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
+
 \documentclass{scrartcl}
+
+\usepackage{apacite}
+% \usepackage{hyperref}
+
+\usepackage[left=2.5cm,right=2.5cm,top=1.5cm,bottom=2.5cm]{geometry}
+
+
+% as bibentry and hyperref clash in some cases, this is a workaround
+% as suggested by the following two links:
+%https://tex.stackexchange.com/questions/227933/using-bibentry-to-cite-in-text-reference-with-apacite
+% and
+%https://tex.stackexchange.com/questions/65348/clash-between-bibentry-and-hyperref-with-bibstyle-elsart-harv/65401#65401
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage[colorlinks=true]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+
+
+% hanging publications: 1st line starts at beginning of line, 
+% further lines are placed a bit to the right
+\usepackage{hanging}
+
+\newcommand\publication[1]{\noindent\hangindent=2em\hangafter=0 {\footnotesize{\bibentry{#1}\smallskip}}}
+
+
+
+
 
 \reversemarginpar % Move the margin to the left of the page 
 
@@ -54,6 +82,9 @@
 %----------------------------------------------------------------------------------------
 
 \begin{document}
+
+\nobibliography{pub.bib}
+\bibliographystyle{apacite} 
 
 \thispagestyle{empty} % Stop the page count at the bottom of the first page
 
@@ -121,7 +152,8 @@
     \School{University of California, Santa Cruz} \newline
     \Description{\MarginText{2020 - Present \\ 2021 on Leave}Ph.D. in Physics \newline
         Physics Department \newline
-        Thesis: \textit{TBD}\newline}
+        Thesis: \textit{TBD}\newline
+        Advisors: \textsc{Tesla E. Jeltema, Alexie S. Leauthaud}}
 
 
     \School{Duke University} \newline
@@ -130,7 +162,7 @@
         Thesis: \textit{Intrinsic Alignment in the redMaPPer Clusters in the Dark Energy
             Survey}\newline
         % Description: This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.\newline
-        Advisor:  \textsc{Professor Michael A. Troxel} }
+        Advisor:  \textsc{Michael A. Troxel} }
 
     %------------------------------------------------
 
@@ -149,21 +181,20 @@
     %----------------------------------------------------------------------------------------
     %	PUBLICATIONS
     %----------------------------------------------------------------------------------------
+    \spacedlowsmallcaps{Publication}\vspace{0.2em}
+    \begin{enumerate}
+    \item \paper{Resposne Bias in Cosmic Shear, in prep.}\\
+    \textsc{C.Zhou \& M.R. Becker}
+    \item \paper{Constraining the Optical Selection Bias of Galaxy Cluster Lensing with Multi-wavelength Data, in prep.}\\
+    \textsc{C.Zhou, H.Y Wu, A.N. Salcedo, T.E. Jeltema et al.}
+    \item \paper{The Intrinsic Alignment of Red Galaxies in DES Y1 redMaPPer Galaxy Clusters}, MNRAS Accepted \\
+    \textsc{C. Zhou, A. Tong, M.A. Troxel, J. Blazek, C. Lin et al.}
+    \end{enumerate}
+    % \href{google.com}{Link}
+    % \bibentry{zhouIntrinsicAlignmentRed2023}
 
-    \spacedlowsmallcaps{Publications in Preparation}\vspace{1em}
-
-    \paper{The Intrinsic Alignment of Red Galaxies in DES Y1 redMaPPer Galaxy Clusters} \newline
-    \Description{\MarginText{In Review} \textsc{C. Zhou, A. Tong, M. Troxel, J. Blazek, C.Lin} et al.}
-
-    %------------------------------------------------
-
-    \paper{Modelling the Selection Effect Bias in the Dark Energy Survey
-        Y3 Clusters with AbacusCosmos and the South Pole Telescope} \newline
-    \Description{\MarginText{Expected 2022} \textsc{C. Zhou} et al.}
-
-    \paper{High Redshift Star-forming Clumps in NewHorizon and FIRE
-        Simulations}\newline
-    \Description{\MarginText{Expected 2022}  \textsc{C. Zhou} et al.}
+    % \paper{The Intrinsic Alignment of Red Galaxies in DES Y1 redMaPPer Galaxy Clusters} \newline
+    % \Description{\textsc{C. Zhou, A. Tong, M. Troxel, J. Blazek, C.Lin} et al.}
 
     %------------------------------------------------
 
@@ -173,13 +204,16 @@
     %	COMPUTER SKILLS
     %----------------------------------------------------------------------------------------
 
-    \spacedlowsmallcaps{Mentoring}\vspace{1em}
 
-    \School{Science Internship Program} \newline
-    \Description{\MarginText{2022 Summer}In this program, I will work with a group of high school students on the Dark Energy Survey Y6 Modeling Choice for 8 Weeks}
+    % \spacedlowsmallcaps{Student Mentored}\vspace{1em}
 
-    \School{UC Santa Cruz SPS Mentor} \newline
-    \Description{\MarginText{2022 Spring}I am mentoring UC Santa Cruz undergraduate Neil Goswami on graduate school application and research topic choice}
+    % \Description{\MarginText{jan. 2023}APS Conference for Undergraduate Women in Physics at UC Santa Cruz Local Organizing Committee}
+
+    % \School{Science Internship Program} \newline
+    % \Description{\MarginText{2022 Summer}In this program, I will work with a group of high school students on the Dark Energy Survey Y6 Modeling Choice for 8 Weeks}
+
+    % \School{UC Santa Cruz SPS Mentor} \newline
+    % \Description{\MarginText{2022 Spring}I am mentoring UC Santa Cruz undergraduate Neil Goswami on graduate school application and research topic choice}
 
     %------------------------------------------------
 
@@ -196,16 +230,21 @@
 
     \spacedlowsmallcaps{Outreach}\vspace{1em}
 
-    \School{UC Santa Cruz Physics Outreach Taskforce} \newline
-    \Description{\MarginText{2022 Spring}I am a member of a team at UC Santa Cruz dedicated to broaden the impact of physics research and serve the underprivledged communities in physics.}
+    \Description{\MarginText{2022}UC Santa Cruz Physics Outreach Taskforce}
+
+
+    % \Description{\MarginText{2022 Spring}I am a member of a team at UC Santa Cruz dedicated to broaden the impact of physics research and serve the underprivledged communities in physics.}
 
     %----------------------------------------------------------------------------------------
 
     \spacedlowsmallcaps{Service}\vspace{1em}
 
-    \Description{\MarginText{2022 Summer}LSST DESC 2022 Chicago Meeting Science Origanizing Committee}
+    \Description{\MarginText{jan. 2023}APS Conference for Undergraduate Women in Physics at UC Santa Cruz Local Organizing Committee}
+    \Description{\MarginText{aug. 2022}LSST DESC 2022 Chicago Meeting Science Origanizing Committee}
 
-    \Description{\MarginText{2022 }DES Early Career Scientists Committee}
+    \Description{\MarginText{2022 - present}DES Early Career Scientists Committee}
+
+    \Description{\MarginText{2022 - present}LSST DESC Mentoring Comittee}
 
     %------------------------------------------------
 
@@ -213,9 +252,10 @@
 
     \spacedlowsmallcaps{Teaching}\vspace{1em}
 
+    \Description{\MarginText{2022 Fall}Quantum Mechanics  (TA)}
     \Description{\MarginText{2022 Summer}Intermediate Physics Laboratory (TA)}
     \Description{\MarginText{2022 Spring}Advanced Astrophysics Laboratory (TA)}
-    \Description{\MarginText{twice}Introductory Physics Laboratory (TA2)}
+    \Description{\MarginText{3 times}Introductory Physics Laboratory (TA)}
 
 
     %------------------------------------------------
