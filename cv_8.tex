@@ -21,32 +21,133 @@
 
 \documentclass{scrartcl}
 
-\usepackage{apacite}
-% \usepackage{hyperref}
-
 \usepackage[left=2.5cm,right=2.5cm,top=1.5cm,bottom=2.5cm]{geometry}
 
+%----------------------------------------------------------------------------------------
+%	PUBLICATION LISTS: rendered from publications.bib by biblatex + biber
+%	(latexmk runs biber automatically; the `keywords` field of each entry picks its list)
+%----------------------------------------------------------------------------------------
 
-% as bibentry and hyperref clash in some cases, this is a workaround
-% as suggested by the following two links:
-%https://tex.stackexchange.com/questions/227933/using-bibentry-to-cite-in-text-reference-with-apacite
-% and
-%https://tex.stackexchange.com/questions/65348/clash-between-bibentry-and-hyperref-with-bibstyle-elsart-harv/65401#65401
-\usepackage{bibentry}
-\makeatletter\let\saved@bibitem\@bibitem\makeatother
-\usepackage[colorlinks=true]{hyperref}
-\makeatletter\let\@bibitem\saved@bibitem\makeatother
+\usepackage[backend=biber, style=numeric, giveninits=true, maxbibnames=6, minbibnames=5,
+            uniquename=false, uniquelist=false]{biblatex}
+\addbibresource{publications.bib}
 
+% Newest first; undated entries (in prep.) go on top
+\DeclareSortingTemplate{newestfirst}{
+  \sort{\field{presort}}
+  \sort[final]{\field{sortkey}}
+  \sort[direction=descending]{\field{year}\literal{9999}}
+  \sort[direction=descending]{\field[padside=left,padwidth=2,padchar=0]{month}\literal{99}}
+  \sort[direction=descending]{\field[padside=left,padwidth=2,padchar=0]{day}\literal{99}}
+  \sort{\field{title}}
+}
+\ExecuteBibliographyOptions{sorting=newestfirst}
 
-% hanging publications: 1st line starts at beginning of line, 
-% further lines are placed a bit to the right
-\usepackage{hanging}
+% Contributing-author papers show only the first author ("A. Smith et al.")
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=keywords, match=\regexp{contributing}, final]
+      \step[fieldset=options, fieldvalue={maxbibnames=1, minbibnames=1}]
+    }
+  }
+}
 
-\newcommand\publication[1]{\noindent\hangindent=2em\hangafter=0 {\footnotesize{\bibentry{#1}\smallskip}}}
+% Authors as "C. Zhou, M.A. Troxel et al." in small caps, with my own name in bold
+\DeclareNameAlias{default}{given-family}
+\renewcommand*{\bibinitdelim}{}
+\DeclareDelimFormat{finalnamedelim}{\addcomma\space}
+\DefineBibliographyExtras{english}{\let\finalandcomma\empty} % no comma before "et al."
+\newcommand*{\ifmyname}{%
+  \ifboolexpr{ test {\ifdefstring{\namepartfamily}{Zhou}} and
+               ( test {\ifdefstring{\namepartgiven}{Conghao}} or test {\ifdefstring{\namepartgiven}{C.}} ) }}
+% (the old-style-figure Palatino cut has no bold small caps, so take them from plain Palatino)
+\newcommand*{\mkmyname}[1]{{\fontfamily{ppl}\selectfont\textbf{#1}}}
+% Students I advised get a dagger: put `author+an = {<author number>=student}` in their entry
+\renewcommand*{\mkbibcompletename}[1]{%
+  \textsc{\ifmyname{\mkmyname{#1}}{#1}}\ifitemannotation{student}{\textsuperscript{\dag}}{}}
+\defbibnote{advisees}{\par\noindent\small\textsuperscript{\dag}\,\textsc{student advised}} % between heading and entries
 
+% Entry layout:  Title, <linked venue>, note
+%                Authors
+\DeclareFieldFormat*{title}{#1}
+\DeclareFieldFormat{note}{\mkbibemph{#1}}
+\DefineBibliographyStrings{english}{inpreparation = {in prep\adddot}}
+\renewcommand*{\newunitpunct}{\addcomma\space}
+\renewcommand*{\finentrypunct}{}
 
+% Venue text: "Phys. Rev. D 110, 103508 (2024)", "arXiv:2606.21141 (2026)" or "LSST Technote SITCOMTN-165 (2025)"
+\newbibmacro*{cv:venue:text}{%
+  \ifboolexpr{ test {\iffieldundef{journaltitle}} or test {\iffieldequalstr{journaltitle}{arXiv e-prints}} }
+    {\iffieldundef{eprint}
+       {\thefield{type}\iffieldundef{number}{}{~\thefield{number}}}
+       {arXiv:\thefield{eprint}}}
+    {{\frenchspacing % no sentence-end spacing after the dots in "Mon. Not. R. Astron. Soc."
+      \iffieldundef{shortjournal}{\thefield{journaltitle}}{\thefield{shortjournal}}}%
+     \iffieldundef{volume}{}{~\iffieldsequal{volume}{year}{\thefield{number}}{\thefield{volume}}}%
+     \iffieldundef{pages}{}{, \usefield{\mkfirstpage}{pages}}}%
+  \iffieldundef{year}{}{~(\thefield{year})}}
 
+% Link it to the DOI, else arXiv, else the entry's url
+\newbibmacro*{cv:link}[1]{%
+  \iffieldundef{doi}
+    {\iffieldundef{eprint}
+       {\iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}
+       {\href{https://arxiv.org/abs/\thefield{eprint}}{#1}}}
+    {\href{https://doi.org/\thefield{doi}}{#1}}}
 
+% Journal papers also get their arXiv number: "Phys. Rev. D 110, 103508 (2024) [arXiv:2312.11789]"
+\newbibmacro*{cv:arxiv}{%
+  \ifboolexpr{ test {\iffieldundef{eprint}} or test {\iffieldundef{journaltitle}} or
+               test {\iffieldequalstr{journaltitle}{arXiv e-prints}} }
+    {}
+    {\setunit{\addspace}%
+     \printtext[brackets]{\href{https://arxiv.org/abs/\thefield{eprint}}{arXiv:\thefield{eprint}}}}}
+
+\newbibmacro*{cv:venue}{%
+  \ifboolexpr{ test {\iffieldundef{journaltitle}} and test {\iffieldundef{eprint}} and test {\iffieldundef{type}} }
+    {}
+    {\printtext{\usebibmacro{cv:link}{\usebibmacro{cv:venue:text}}}}%
+  \usebibmacro{cv:arxiv}%
+  \newunit
+  \printfield{pubstate}}
+
+\newbibmacro*{cv:entry}{%
+  \printfield{title}%
+  \newunit
+  \usebibmacro{cv:venue}%
+  \newunit
+  \printfield{note}%
+  \setunit{\newline}%
+  \printnames{author}%
+  \finentry}
+\newcommand*{\cvdriver}[1]{\DeclareBibliographyDriver{#1}{\usebibmacro{cv:entry}}}
+\forcsvlist{\cvdriver}{article,misc,online,report,unpublished,inproceedings,book,thesis}
+
+% Each list is a numbered list, one paper per item, under a heading that never
+% gets stranded at the bottom of a page
+\defbibenvironment{cvpubs}
+  {\begin{enumerate}\setlength{\itemsep}{0.45em}}
+  {\end{enumerate}}
+  {\item}
+\renewcommand*{\bibfont}{\footnotesize}
+\usepackage{needspace}
+\defbibheading{cvpubs}{\needspace{6\baselineskip}\spacedlowsmallcaps{#1}\vspace{0.2em}}
+\BiblatexSplitbibDefernumbersWarningOff % numbering comes from enumerate, not biblatex
+
+% Journal macros used in NASA ADS BibTeX exports, as official ISO 4 abbreviations
+\newcommand*{\prd}{Phys. Rev. D}
+\newcommand*{\prl}{Phys. Rev. Lett.}
+\newcommand*{\mnras}{Mon. Not. R. Astron. Soc.}
+\newcommand*{\apj}{Astrophys. J.}
+\newcommand*{\apjl}{Astrophys. J. Lett.}
+\newcommand*{\apjs}{Astrophys. J. Suppl. Ser.}
+\newcommand*{\aj}{Astron. J.}
+\newcommand*{\aap}{Astron. Astrophys.}
+\newcommand*{\jcap}{J. Cosmol. Astropart. Phys.}
+\newcommand*{\pasp}{Publ. Astron. Soc. Pac.}
+
+%----------------------------------------------------------------------------------------
 
 \reversemarginpar % Move the margin to the left of the page 
 
@@ -56,6 +157,8 @@
 \usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
 
 \renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\AtBeginDocument{\setlength{\marginparwidth}{82pt}} % Wide enough for "apr.2022--may.2025" on one line
 
 \usepackage{hyperref} % Required for adding links	and customizing them
 \hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
@@ -71,9 +174,6 @@
 \newcommand{\others}[1]{\noindent\hangindent=2em\hangafter=0 \small #1  % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}} % Add some white space after each new entry
 
-\newcommand{\paper}[1]{\noindent\hangindent=2em\hangafter=0 \footnotesize #1  % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
-\vspace{0.5em}} % Add some white space after each new entry
-
 
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
 
@@ -83,8 +183,7 @@
 
 \begin{document}
 
-\nobibliography{pub.bib}
-\bibliographystyle{apacite} 
+\nocite{*} % every entry in publications.bib goes into the CV
 
 \thispagestyle{empty} % Stop the page count at the bottom of the first page
 
@@ -181,84 +280,41 @@
     %----------------------------------------------------------------------------------------
     %	PUBLICATIONS
     %----------------------------------------------------------------------------------------
-    \spacedlowsmallcaps{Science Publications with Major Contributions}\vspace{0.2em}
-    \begin{enumerate}
-    \item \paper{Constraining optical selection effection with DES and SPT, in prep.}\\
-    \textsc{C. Zhou, S. Grandis, H.Y. Wu, A.N. Salcedo} et~al.
+    \printbibliography[keyword=major, heading=cvpubs, env=cvpubs, prenote=advisees,
+                       title={Science Publications with Major Contributions}]
 
-    \item \paper{Resposne Bias in Shear Calibration, in prep.}\\
-    \textsc{C. Zhou, M.R. Becker, M. Gatti} et~al.
+    \printbibliography[keyword=technical, heading=cvpubs, env=cvpubs,
+                       title={Technical Publications with Major Contributions}]
 
-    \item \paper{Accurate Galaxy Cluster Shear and Mass Calibration for LSST with AnaCal, in collaboration review}\\
-    \textsc{C. Zhou, X. Li} et~al.
-
-    \item \paper{Relationship between 2D and 3D Galaxy Stellar Mass and Correlations with Halo Mass,  \href{https://iopscience.iop.org/article/10.1088/1475-7516/2025/10/014/meta}{JCAP}}\\
-    \textsc{C. Zhou, A.S. Leauthaud, S. Xu., B. Diemer, S. Huang,} et~al.
-
-    \item \paper{Forecasting the constraints on optical selection bias and projection effects of galaxy cluster lensing with multiwavelength data, \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.110.103508}{PRD Editors’ Suggestion} }\\
-    \textsc{C. Zhou, H.Y Wu, A.N. Salcedo, S. Grandis, T.E. Jeltema, A.S. Leauthaud} et~al.
-
-    \item \paper{The intrinsic alignment of red galaxies in DES Y1 redMaPPer galaxy clusters}, \href{https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stad2712/7264871}{MNRAS} \\
-    \textsc{C. Zhou, A. Tong, M.A. Troxel, J. Blazek, C. Lin} et al.
-
-    \end{enumerate}
-
-        \spacedlowsmallcaps{Technical Publications with Major Contributions}\vspace{0.2em}
-    \begin{enumerate}
-    \item \paper{Surface brightness profiles around massive galaxies in LSSTComCam data}, \href{https://sitcomtn-165.lsst.io/}{LSST Technote}\\
-    \textsc{C. Zhou, T. Jeltema, A. von der Linden, L.S. Kelvin} et~al.
-
-    \end{enumerate}
-
-
-
-    \spacedlowsmallcaps{Contributing Author Science Publications}\vspace{0.2em}
-    \begin{enumerate}
-        \item \paper{The Vera C. Rubin Observatory Data Preview 1}, \href{https://arxiv.org/abs/2603.23786}{arXiv}\\
-        \textsc{Vera C Rubin Observatory Team}.
-        \item \paper{Impact of projection-induced optical selection bias on the weak lensing mass calibration of galaxy clusters}, \href{https://journals.aps.org/prd/abstract/10.1103/h9xq-k9gh}{PRD}\\
-        \textsc{T.N. Nde} et al.
-        \item \paper{DESI-DR1 3×2-pt analysis: consistent cosmology across weak lensing surveys}, \href{https://arxiv.org/abs/2512.15960}{arXiv}\\
-        \textsc{A. Porredon} et al.
-        \item \paper{Reaching for the Edge II: Stellar Halos out to Large Radii as a Tracer of Dark Matter Halo Mass}, \href{https://arxiv.org/abs/2511.10723}{arXiv}\\
-        \textsc{K. Leidig} et al.
-        \item \paper{Cosmological Constraints from Dark Energy Survey Year 1 Cluster Lensing and Abundances with Simulation-based Forward-Modeling}, \href{https://arxiv.org/abs/2510.25706}{arXiv}\\
-        \textsc{A.N. Salcedo} et al.
-        \item \paper{Testing the Stellar Feedback-driven Breathing Mode in Low-mass Galaxies with Gas Kinematics}, \href{https://arxiv.org/abs/2510.17996}{arXiv}\\
-        \textsc{Y. Luo} et al.
-        \item \paper{Dark energy survey year 3 results: Cosmological constraints from cluster abundances, weak lensing, and galaxy clustering}, \href{https://journals.aps.org/prd/abstract/10.1103/3dzh-d8f5}{PRD}\\
-        \textsc{T.M.C. Abbott} et al.
-        \item \paper{NSF-DOE Vera C. Rubin Observatory Observations of Interstellar Comet 3I/ATLAS (C/2025 N1)}, \href{https://arxiv.org/abs/2507.13409}{arXiv}\\
-        \textsc{C.O. Chandler} et al.
-        \item \paper{Data Release 1 of the Dark Energy Spectroscopic Instrument}, \href{https://arxiv.org/abs/2503.14745}{arXiv}\\
-        \textsc{DESI Collaboration}
-        \item \paper{Association between optically identified galaxy clusters and the underlying dark matter halos}, \href{https://journals.aps.org/prd/abstract/10.1103/r7tt-bzs7}{PRD}\\
-        \textsc{S. Cao} et al.
-        \item \paper{The Outskirt Stellar Mass of Low-Redshift Massive Galaxies is an Excellent Halo Mass Proxy in Illustris/IllustrisTNG Simulations}, \href{https://iopscience.iop.org/article/10.3847/1538-4357/adeca0/meta}{ApJ}\\
-        \textsc{S. Xu} et al.
-        \item \paper{Improving Galaxy Cluster Selection with the Outskirt Stellar Mass of Galaxies}, \href{https://journals.aps.org/prd/abstract/10.1103/1j5f-cmkg}{PRD}\\
-        \textsc{M.Kwiecien} et al.
-        \item \paper{Optical galaxy cluster mock catalogs with realistic projection effects: validations with the SDSS redMaPPer clusters}, \href{https://arxiv.org/abs/2410.02497}{PRD}\\
-        \textsc{A. Lee} et al. 
-        \item \paper{Building an Efficient Cluster Cosmology Software Package for Modeling Cluster Counts and Lensing}, \href{https://arxiv.org/abs/2309.06593}{arXiv}\\
-        \textsc{M. Aguena} et al. 
-        \item \paper{Dark Energy Survey Year 3 results: Simulation-based cosmological inference with wavelet harmonics, scattering transforms, and moments of weak lensing mass maps. Validation on simulations}, \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.109.063534}{PRD}\\
-        \textsc{M. Gatti} et al. 
-        \item \paper{Dark Energy Survey Year 3 Results: Deep Field Optical + Near-Infrared Images and Catalogue}, \href{https://academic.oup.com/mnras/article/509/3/3547/6412546}{MNRAS}\\
-        \textsc{W.G. Hartley} et al. 
-    \end{enumerate}
+    \printbibliography[keyword=contributing, heading=cvpubs, env=cvpubs,
+                       title={Contributing Author Science Publications}]
 
     \vspace{1em} % Extra space between major sections
 
     \spacedlowsmallcaps{Talks}\vspace{1em}
 
-    \Description{\MarginText{dec. 2024}Theoretical Astrophysics and Cosmology Seminar, University of Arizona}
-    \Description{\MarginText{nov. 2024}Cosmology Seminar, UC Davis}
-    \Description{\MarginText{apr. 2024}CMB S4 Cluster AWG Meeting}
-    \Description{\MarginText{mar. 2024}Center for the Fundamental Physics of the Universe Seminar, Brown University}
-    \Description{\MarginText{mar. 2024}Journal Club, University of Pennsylvania}
-    \Description{\MarginText{oct. 2023}Cosmology Seminar, Tsinghua University}
-    \Description{\MarginText{oct. 2023}Joint Stony Brook University/ Brookhaven National Lab Cosmology Seminar}
+    \Description{\MarginText{aug. 2026}\textbf{Tsinghua University}, Department of Astronomy Seminar\newline
+        \textit{No Cluster Left Behind: Multiwavelength Cluster Analysis with All the Data}}
+    \Description{\MarginText{jul. 2026}\textbf{Tsung-Dao Lee Institute}, Astronomy Seminar\newline
+        \textit{No Cluster Left Behind: Multiwavelength Cluster Analysis with All the Data}}
+    \Description{\MarginText{jul. 2026}\textbf{Shanghai Jiao Tong University}, Department of Astronomy Seminar\newline
+        \textit{No Cluster Left Behind: Multiwavelength Cluster Analysis with All the Data}}
+    \Description{\MarginText{may 2026}\textbf{South Pole Telescope Collaboration}, Cluster Working Group Meeting\newline
+        \textit{No Cluster Left Behind: Joint Mass Calibration for DES and SPT Clusters}}
+    \Description{\MarginText{dec. 2024}\textbf{University of Arizona}, Theoretical Astrophysics and Cosmology Seminar\newline
+        \textit{Cluster Cosmology: Pixel to Object, CMB to Stellar Mass}}
+    \Description{\MarginText{nov. 2024}\textbf{University of California, Davis}, Cosmology Seminar\newline
+        \textit{Optical Cluster Cosmology: Selection to IA, Pixel to Object}}
+    \Description{\MarginText{apr. 2024}\textbf{CMB-S4 Collaboration}, Cluster AWG Meeting\newline
+        \textit{Calibrating Optical Selection Bias with Multiwavelength Data}}
+    \Description{\MarginText{mar. 2024}\textbf{Brown University}, Center for the Fundamental Physics of the Universe Seminar\newline
+        \textit{Cluster Cosmology Beyond Richness}}
+    \Description{\MarginText{mar. 2024}\textbf{University of Pennsylvania}, Journal Club\newline
+        \textit{Response Clustering Bias}}
+    \Description{\MarginText{oct. 2023}\textbf{Tsinghua University}, Cosmology Seminar\newline
+        \textit{Intrinsic Alignment in DES Y1 redMaPPer Clusters}}
+    \Description{\MarginText{oct. 2023}\textbf{Stony Brook University \& Brookhaven National Lab}, Cosmology Seminar\newline
+        \textit{Constraining Optical Selection Bias in Cluster Lensing w/ Multiwavelength Data}}
 
     \spacedlowsmallcaps{Observing Experience}\vspace{1em}
 
@@ -266,12 +322,6 @@
     \Description{\MarginText{3  nights}DECaLS Intermediate Band Imaging Survey, Blanco 4m at CTIO}
 
 
-
-    % \href{google.com}{Link}
-    % \bibentry{zhouIntrinsicAlignmentRed2023}
-
-    % \paper{The Intrinsic Alignment of Red Galaxies in DES Y1 redMaPPer Galaxy Clusters} \newline
-    % \Description{\textsc{C. Zhou, A. Tong, M. Troxel, J. Blazek, C.Lin} et al.}
 
     %------------------------------------------------
 
@@ -308,25 +358,31 @@
     % \Description{\MarginText{Summer 2022} Tian Xie. Then high school. Now }
     % \Description{\MarginText{oct. 2023}Joint Stony Brook University/ Brookhaven National Lab Cosmology Seminar}
 
-    \spacedlowsmallcaps{Professional Membership}\vspace{1em}
+    \needspace{6\baselineskip} % keep the heading with its entries
+    \spacedlowsmallcaps{Science Collaborations}\vspace{1em}
 
-    \Description{\MarginText{2026 - present} Member, Roman Science Collaboration}
-    \Description{\MarginText{2024 - present} In-Kind Contributor, Rubin Observatory Commissioning}
-    \Description{\MarginText{2024 - Present} Full Member, LSST Dark Energy Science Collaboration}
-    \Description{\MarginText{2024 - Present} Student Member, American Astronomical Society}
-    \Description{\MarginText{2024 - Present} Student Member, American Physical Society}
-    \Description{\MarginText{2023 - Present} Member, LSST Galaxy Science Collaboration}
-    \Description{\MarginText{2023 - Present} Member, LSST Informatics \& Statistics Science Collaboration}
-    \Description{\MarginText{2020 - Present} Sponsored Member, Dark Energy Spectroscopic Instrument}
-    \Description{\MarginText{2020 - 2024} Member, LSST Dark Energy Science Collaboration}
-    \Description{\MarginText{2018 - Present} Student Member, Dark Energy Survey}
-    
+    \Description{\MarginText{2026--present}Roman Science Collaboration}
+    \Description{\MarginText{2024--present}Rubin Observatory Commissioning, In-Kind Contributor}
+    \Description{\MarginText{2023--present}LSST Galaxies Science Collaboration}
+    \Description{\MarginText{2023--present}LSST Informatics \& Statistics Science Collaboration}
+    \Description{\MarginText{2020--present}LSST Dark Energy Science Collaboration, Full Member since 2024}
+    \Description{\MarginText{2020--present}Dark Energy Spectroscopic Instrument, Sponsored Member}
+    \Description{\MarginText{2018--present}Dark Energy Survey, Student Member}
+
+    \vspace{1em}
+
+    \needspace{7\baselineskip} % keep this short section on one page
+    \spacedlowsmallcaps{Professional Societies}\vspace{1em}
+
+    \Description{\MarginText{2026--present}Sigma Xi, Member}
+    \Description{\MarginText{2024--present}American Astronomical Society, Student Member}
+    \Description{\MarginText{2024--present}American Physical Society, Student Member}
 
     \vspace{1em}
 
     \spacedlowsmallcaps{Outreach}\vspace{1em}
 
-    \Description{\MarginText{2023 - 2024}Starlight Over Street Light}
+    \Description{\MarginText{2023--2024}Starlight Over Street Light}
     \Description{\MarginText{2022}UC Santa Cruz Physics Outreach Taskforce}
     \Description{\MarginText{2022}Science Internship Program Mentor}
     \Description{\MarginText{2022}UC Santa Cruz Physics Mentoring Program Mentor}
@@ -336,26 +392,38 @@
 
     %----------------------------------------------------------------------------------------
 
-    \spacedlowsmallcaps{}\vspace{1em}
+    \vspace{1em}
 
-    \spacedlowsmallcaps{Professional Service}\vspace{1em}
+    \needspace{6\baselineskip}
+    \spacedlowsmallcaps{Collaboration Service}\vspace{1em}
+
+    \Description{\MarginText{jun. 2026--present}LSST DESC Speaker's Bureau}
+    \Description{\MarginText{jul. 2022--present}LSST DESC Mentoring Committee}
+    \Description{\MarginText{apr.2022--may.2025}DES Early Career Scientists Committee}
+
+    \vspace{1em}
+
+    \needspace{6\baselineskip}
+    \spacedlowsmallcaps{Seminar \& Meeting Organization}\vspace{1em}
 
     \Description{\MarginText{2025 Winter}UC Santa Cruz Physics Colloquium Committee}
-    \Description{\MarginText{2024 - present}Referee, Astronomy \& Astrophysics}
-    \Description{\MarginText{jul.2023-jun.2024}Organizer, BCG Seminar, Boise State}
-    \Description{\MarginText{sep.2023-jun.2024}Organizer, CosmoGal Seminar, UC Santa Cruz}
-
+    \Description{\MarginText{sep.2023--jun.2024}Organizer, CosmoGal Seminar, UC Santa Cruz}
+    \Description{\MarginText{jul.2023--jun.2024}Organizer, BCG Seminar, Boise State}
     \Description{\MarginText{jan. 2023}LOC, APS Conference for Undergraduate Women in Physics at UC Santa Cruz}
     \Description{\MarginText{aug. 2022}SOC, LSST DESC 2022 Chicago Meeting}
 
-    \Description{\MarginText{apr.2022-may.2025}DES Early Career Scientists Committee}
+    \vspace{1em}
 
-    \Description{\MarginText{jul. 2022 - present}LSST DESC Mentoring Comittee}
+    \needspace{4\baselineskip}
+    \spacedlowsmallcaps{Refereeing}\vspace{1em}
+
+    \Description{\MarginText{2024--present}Astronomy \& Astrophysics}
 
     %------------------------------------------------
 
     \vspace{1em}
 
+    \needspace{10\baselineskip} % keep this section on one page
     \spacedlowsmallcaps{Teaching Experience}\vspace{1em}
 
     \Description{\MarginText{2024 Spring}Application of Quantum Materials (Grader)}
