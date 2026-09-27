@@ -58,6 +58,7 @@
 \renewcommand*{\bibinitdelim}{}
 \DeclareDelimFormat{finalnamedelim}{\addcomma\space}
 \DefineBibliographyExtras{english}{\let\finalandcomma\empty} % no comma before "et al."
+\DeclareDelimFormat{andothersdelim}{\addnbspace} % keep "et al." on the same line as the last name
 \newcommand*{\ifmyname}{%
   \ifboolexpr{ test {\ifdefstring{\namepartfamily}{Zhou}} and
                ( test {\ifdefstring{\namepartgiven}{Conghao}} or test {\ifdefstring{\namepartgiven}{C.}} ) }}
@@ -68,7 +69,8 @@
   \textsc{\ifmyname{\mkmyname{#1}}{#1}}\ifitemannotation{student}{\textsuperscript{\dag}}{}}
 \defbibnote{advisees}{\par\noindent\small\textsuperscript{\dag}\,\textsc{student advised}} % between heading and entries
 
-% Entry layout:  Title, <linked venue>, note
+% Entry layout:  Title
+%                <linked venue> [arXiv], note
 %                Authors
 \DeclareFieldFormat*{title}{#1}
 \DeclareFieldFormat{note}{\mkbibemph{#1}}
@@ -114,7 +116,7 @@
 
 \newbibmacro*{cv:entry}{%
   \printfield{title}%
-  \newunit
+  \setunit{\newline}% journal and arXiv on their own line, so the reference never splits
   \usebibmacro{cv:venue}%
   \newunit
   \printfield{note}%
@@ -288,6 +290,18 @@
 
     \printbibliography[keyword=contributing, heading=cvpubs, env=cvpubs,
                        title={Contributing Author Science Publications}]
+
+    \vspace{1em} % Extra space between major sections
+
+    %----------------------------------------------------------------------------------------
+    %	FUNDING
+    %----------------------------------------------------------------------------------------
+
+    \needspace{4\baselineskip} % keep the heading with its entry
+    \spacedlowsmallcaps{Funding}\vspace{1em}
+
+    \Description{\MarginText{2026--2027}\textbf{Chancellor's Dissertation Year Fellowship}, UC Santa Cruz, \$33,000}
+    \Description{\MarginText{2020}\textbf{Rodney I. McCormick Award}, Duke University, \$1,500}
 
     \vspace{1em} % Extra space between major sections
 
