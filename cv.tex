@@ -135,6 +135,8 @@
 \renewcommand*{\bibfont}{\footnotesize}
 \usepackage{needspace}
 \defbibheading{cvpubs}{\needspace{6\baselineskip}\spacedlowsmallcaps{#1}\vspace{0.2em}}
+% Papers in preparation (pubstate = {inpreparation}) stay in publications.bib but are not listed
+\defbibcheck{noprep}{\iffieldequalstr{pubstate}{inpreparation}{\skipentry}{}}
 \BiblatexSplitbibDefernumbersWarningOff % numbering comes from enumerate, not biblatex
 
 % Journal macros used in NASA ADS BibTeX exports, as official ISO 4 abbreviations
@@ -282,13 +284,13 @@
     %----------------------------------------------------------------------------------------
     %	PUBLICATIONS
     %----------------------------------------------------------------------------------------
-    \printbibliography[keyword=major, heading=cvpubs, env=cvpubs, prenote=advisees,
+    \printbibliography[keyword=major, check=noprep, heading=cvpubs, env=cvpubs, prenote=advisees,
                        title={Science Publications with Major Contributions}]
 
-    \printbibliography[keyword=technical, heading=cvpubs, env=cvpubs,
+    \printbibliography[keyword=technical, check=noprep, heading=cvpubs, env=cvpubs,
                        title={Technical Publications with Major Contributions}]
 
-    \printbibliography[keyword=contributing, heading=cvpubs, env=cvpubs,
+    \printbibliography[keyword=contributing, check=noprep, heading=cvpubs, env=cvpubs,
                        title={Contributing Author Science Publications}]
 
     \vspace{1em} % Extra space between major sections
@@ -307,6 +309,8 @@
 
     \spacedlowsmallcaps{Talks}\vspace{1em}
 
+    \Description{\MarginText{oct. 2026}\textbf{Kavli IPMU, University of Tokyo}, Astro Seminar\newline
+        \textit{No Cluster Left Behind: Multiwavelength Cluster Analysis with All the Data}}
     \Description{\MarginText{aug. 2026}\textbf{Tsinghua University}, Department of Astronomy Seminar\newline
         \textit{No Cluster Left Behind: Multiwavelength Cluster Analysis with All the Data}}
     \Description{\MarginText{jul. 2026}\textbf{Tsung-Dao Lee Institute}, Astronomy Seminar\newline
