@@ -19,6 +19,40 @@
 
 \refsection{0}
   \datalist[entry]{newestfirst/global//global/global}
+    \entry{steelberg2026lbcm}{unpublished}{}
+      \name{author}{3}{}{%
+        {{hash=78204d217cfd783c076bc32b838ac8a4}{%
+           family={Steelberg},
+           familyi={S\bibinitperiod},
+           given={Ethan\bibnamedelima K.},
+           giveni={E\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=748b52fb2c596451893915f9c32c130c}{%
+           family={Jeltema},
+           familyi={J\bibinitperiod},
+           given={Tesla},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{25d93d154362afa60c91282614dfec1e}
+      \strng{fullhash}{25d93d154362afa60c91282614dfec1e}
+      \strng{bibnamehash}{25d93d154362afa60c91282614dfec1e}
+      \strng{authorbibnamehash}{25d93d154362afa60c91282614dfec1e}
+      \strng{authornamehash}{25d93d154362afa60c91282614dfec1e}
+      \strng{authorfullhash}{25d93d154362afa60c91282614dfec1e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pubstate}{inpreparation}
+      \field{title}{Constraints on Baryonification with DES Y3 $\times$ eRASS1 Clusters}
+      \true{nocite}
+      \keyw{major}
+      \annotation{item}{author}{default}{1}{}{0}{student}
+    \endentry
     \entry{zhou_prep_nocluster1}{unpublished}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -55,10 +89,11 @@
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{in DES and SPT collaboration-wide review}
       \field{pubstate}{inpreparation}
       \field{title}{No Cluster Left Behind I: Joint Mass Calibration for Dark Energy Survey and South Pole Telescope Clusters}
       \true{nocite}
-      \keyw{major}
+      \keyw{major,cvprep}
     \endentry
     \entry{zhou_prep_responsebias}{unpublished}{}
       \true{moreauthor}
@@ -94,6 +129,218 @@
       \field{title}{Response Bias in Shear Calibration}
       \true{nocite}
       \keyw{major}
+    \endentry
+    \entry{zhou2026sotn007}{report}{}
+      \name{author}{2}{}{%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=748b52fb2c596451893915f9c32c130c}{%
+           family={Jeltema},
+           familyi={J\bibinitperiod},
+           given={Tesla},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Vera C. Rubin Observatory}%
+      }
+      \strng{namehash}{1b09e8bf5cf555a17bd5112a77584c8c}
+      \strng{fullhash}{1b09e8bf5cf555a17bd5112a77584c8c}
+      \strng{bibnamehash}{1b09e8bf5cf555a17bd5112a77584c8c}
+      \strng{authorbibnamehash}{1b09e8bf5cf555a17bd5112a77584c8c}
+      \strng{authornamehash}{1b09e8bf5cf555a17bd5112a77584c8c}
+      \strng{authorfullhash}{1b09e8bf5cf555a17bd5112a77584c8c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{10}
+      \field{note}{draft}
+      \field{number}{SOTN-007}
+      \field{title}{Surface brightness profiles around massive galaxies from LSSTCam coadds}
+      \field{type}{LSST Technote}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://sotn-007.lsst.io/
+      \endverb
+      \verb{url}
+      \verb https://sotn-007.lsst.io/
+      \endverb
+      \keyw{technical}
+    \endentry
+    \entry{mandacaruguerra2026merian}{misc}{maxbibnames=1,minbibnames=1}
+      \name{author}{12}{}{%
+        {{hash=443ee6401799ce599785432150b0e617}{%
+           family={Mandacarú\bibnamedelima Guerra},
+           familyi={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Lucas\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=021a0c3f03a355961aefcfcbfd179304}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jiaxuan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=835c358c99d5abe29afc188190c9d6d5}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=eebcf131c4e293abb813401c34047a70}{%
+           family={Greene},
+           familyi={G\bibinitperiod},
+           given={Jenny\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=fb8517680c611940af3f29d4171b4e5c}{%
+           family={Danieli},
+           familyi={D\bibinitperiod},
+           given={Shany},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2974741270de4071336af7f9307ed8cc}{%
+           family={Bhattacharyya},
+           familyi={B\bibinitperiod},
+           given={Joy},
+           giveni={J\bibinitperiod}}}%
+        {{hash=26fcac2fb797f8ed493c829bdc4367b3}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={Alyson\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f300aafcc35c75152afb1a85de17d1e1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f61edd75d67be287d5356b68644a94aa}{%
+           family={Leauthaud},
+           familyi={L\bibinitperiod},
+           given={Alexie},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fe504e54ccd4f7e0e4e6401c5de77b9c}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Yifei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b9cb4ea876bcfe9d30a0384c0422a46f}{%
+           family={Peter},
+           familyi={P\bibinitperiod},
+           given={Annika\bibnamedelimb H.\bibnamedelimi G.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{433c5cdc3bfb354998c31d564b393782}
+      \strng{fullhash}{ae147512cec4708b958b6dfb4b6fd27e}
+      \strng{bibnamehash}{433c5cdc3bfb354998c31d564b393782}
+      \strng{authorbibnamehash}{433c5cdc3bfb354998c31d564b393782}
+      \strng{authornamehash}{433c5cdc3bfb354998c31d564b393782}
+      \strng{authorfullhash}{ae147512cec4708b958b6dfb4b6fd27e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{2}
+      \field{eprinttype}{arxiv}
+      \field{month}{10}
+      \field{title}{The Merian Survey: A Statistical Census of Bright Satellites of Sub-Milky Way-Mass Galaxies}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2610.03981
+      \endverb
+      \keyw{contributing}
+    \endentry
+    \entry{luo2026testing}{article}{maxbibnames=1,minbibnames=1}
+      \name{author}{10}{}{%
+        {{hash=fe504e54ccd4f7e0e4e6401c5de77b9c}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Yifei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6bd4a3daf2ca26d6912505f2f25ed630}{%
+           family={Wick},
+           familyi={W\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f61edd75d67be287d5356b68644a94aa}{%
+           family={Leauthaud},
+           familyi={L\bibinitperiod},
+           given={Alexie},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d9cbff41ae1b9ace12b7d31e76945e81}{%
+           family={Wetzel},
+           familyi={W\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=45a1ad53126dff9f00e5f2608cd34750}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Tucker},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e710faffc6f193e84867f5779e09116a}{%
+           family={Kado-Fong},
+           familyi={K\bibinithyphendelim F\bibinitperiod},
+           given={Erin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=f300aafcc35c75152afb1a85de17d1e1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f9b32c004bdac344c811dff9ab4c0496}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xinjun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=021a0c3f03a355961aefcfcbfd179304}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jiaxuan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{01871a21ff8b138cce2f8d9602a9f470}
+      \strng{fullhash}{df68a0e3df0a819da3fc210a0fade8a0}
+      \strng{bibnamehash}{01871a21ff8b138cce2f8d9602a9f470}
+      \strng{authorbibnamehash}{01871a21ff8b138cce2f8d9602a9f470}
+      \strng{authornamehash}{01871a21ff8b138cce2f8d9602a9f470}
+      \strng{authorfullhash}{df68a0e3df0a819da3fc210a0fade8a0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{eprintclass}{astro-ph.GA}
+      \field{eprinttype}{arxiv}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{9}
+      \field{shortjournal}{Astrophys. J.}
+      \field{title}{Testing the Stellar Feedback-driven Breathing Mode in Low-mass Galaxies with Gas Kinematics}
+      \field{volume}{1009}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{225}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3847/1538-4357/aea28f
+      \endverb
+      \verb{eprint}
+      \verb 2510.17996
+      \endverb
+      \keyw{contributing}
     \endentry
     \entry{xu2026connection}{misc}{maxbibnames=1,minbibnames=1}
       \name{author}{7}{}{%
@@ -5974,82 +6221,6 @@
       \true{nocite}
       \verb{eprint}
       \verb 2510.25706
-      \endverb
-      \keyw{contributing}
-    \endentry
-    \entry{luo2025testing}{misc}{maxbibnames=1,minbibnames=1}
-      \name{author}{10}{}{%
-        {{hash=fe504e54ccd4f7e0e4e6401c5de77b9c}{%
-           family={Luo},
-           familyi={L\bibinitperiod},
-           given={Yifei},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=6bd4a3daf2ca26d6912505f2f25ed630}{%
-           family={Wick},
-           familyi={W\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=f61edd75d67be287d5356b68644a94aa}{%
-           family={Leauthaud},
-           familyi={L\bibinitperiod},
-           given={Alexie},
-           giveni={A\bibinitperiod}}}%
-        {{hash=d9cbff41ae1b9ace12b7d31e76945e81}{%
-           family={Wetzel},
-           familyi={W\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod}}}%
-        {{hash=45a1ad53126dff9f00e5f2608cd34750}{%
-           family={Jones},
-           familyi={J\bibinitperiod},
-           given={Tucker},
-           giveni={T\bibinitperiod}}}%
-        {{hash=e710faffc6f193e84867f5779e09116a}{%
-           family={Kado-Fong},
-           familyi={K\bibinithyphendelim F\bibinitperiod},
-           given={Erin},
-           giveni={E\bibinitperiod}}}%
-        {{hash=f300aafcc35c75152afb1a85de17d1e1}{%
-           family={Huang},
-           familyi={H\bibinitperiod},
-           given={Song},
-           giveni={S\bibinitperiod}}}%
-        {{hash=f9b32c004bdac344c811dff9ab4c0496}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Xinjun},
-           giveni={X\bibinitperiod}}}%
-        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
-           family={Zhou},
-           familyi={Z\bibinitperiod},
-           given={Conghao},
-           giveni={C\bibinitperiod}}}%
-        {{hash=021a0c3f03a355961aefcfcbfd179304}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Jiaxuan},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{01871a21ff8b138cce2f8d9602a9f470}
-      \strng{fullhash}{df68a0e3df0a819da3fc210a0fade8a0}
-      \strng{bibnamehash}{01871a21ff8b138cce2f8d9602a9f470}
-      \strng{authorbibnamehash}{01871a21ff8b138cce2f8d9602a9f470}
-      \strng{authornamehash}{01871a21ff8b138cce2f8d9602a9f470}
-      \strng{authorfullhash}{df68a0e3df0a819da3fc210a0fade8a0}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{20}
-      \field{eprintclass}{astro-ph.GA}
-      \field{eprinttype}{arxiv}
-      \field{month}{10}
-      \field{title}{Testing the Stellar Feedback-driven Breathing Mode in Low-mass Galaxies with Gas Kinematics}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \true{nocite}
-      \verb{eprint}
-      \verb 2510.17996
       \endverb
       \keyw{contributing}
     \endentry

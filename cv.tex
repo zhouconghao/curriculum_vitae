@@ -136,7 +136,7 @@
 \usepackage{needspace}
 \defbibheading{cvpubs}{\needspace{6\baselineskip}\spacedlowsmallcaps{#1}\vspace{0.2em}}
 % Papers in preparation (pubstate = {inpreparation}) stay in publications.bib but are not listed
-\defbibcheck{noprep}{\iffieldequalstr{pubstate}{inpreparation}{\skipentry}{}}
+\defbibcheck{noprep}{\iffieldequalstr{pubstate}{inpreparation}{\ifkeyword{cvprep}{}{\skipentry}}{}}
 \BiblatexSplitbibDefernumbersWarningOff % numbering comes from enumerate, not biblatex
 
 % Journal macros used in NASA ADS BibTeX exports, as official ISO 4 abbreviations
