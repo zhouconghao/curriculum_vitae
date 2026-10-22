@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../postdoc_2027"
 		}
 	],
 	"settings": {}

@@ -179,7 +179,7 @@
 \vspace{0.5em}} % Add some white space after each new entry
 
 
-\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+\newcommand{\Description}[1]{{\interlinepenalty=10000\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par}\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here (interlinepenalty keeps each entry on one page)
 
 \newcommand{\Address}[1]{\hangindent=2em\hangafter=0\noindent \footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
 
@@ -256,7 +256,7 @@
     \Description{\MarginText{Expected 2027}Ph.D. in Physics \newline
         Physics Department \newline
         Thesis: \textit{TBD}\newline
-        Comittee: \textsc{Tesla E. Jeltema, Alexie S. Leauthaud}}
+        Advisors: \textsc{Tesla E. Jeltema, Alexie S. Leauthaud}}
 
 
     \School{Duke University} \newline
@@ -265,7 +265,7 @@
         Thesis: \textit{Intrinsic Alignment of redMaPPer Clusters in the Dark Energy
             Survey}\newline
         % Description: This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.\newline
-        Comittee:  \textsc{Michael A. Troxel}, \textsc{Christopher W. Walter}, \textsc{Robert L. Wolpert} }
+        Committee:  \textsc{Michael A. Troxel}, \textsc{Christopher W. Walter}, \textsc{Robert L. Wolpert} }
 
     %------------------------------------------------
 
@@ -416,8 +416,9 @@
     \spacedlowsmallcaps{Collaboration Service}\vspace{1em}
 
     \Description{\MarginText{jun. 2026--present}LSST DESC Speaker's Bureau}
+    \Description{\MarginText{2025, 2026}LSST DESC Collaboration Council Nomination Committee (Chair, 2026)}
     \Description{\MarginText{jul. 2022--present}LSST DESC Mentoring Committee}
-    \Description{\MarginText{apr.2022--may.2025}DES Early Career Scientists Committee}
+    \Description{\MarginText{apr.2022--may.2025}DES Early Career Scientists Committee (Chair, may 2024 -- may 2025)}
 
     \vspace{1em}
 

@@ -130,8 +130,44 @@
       \true{nocite}
       \keyw{major}
     \endentry
-    \entry{zhou2026sotn007}{report}{}
-      \name{author}{2}{}{%
+    \entry{tang2026outflows}{unpublished}{}
+      \name{author}{3}{}{%
+        {{hash=7a799eb929e1ccf4254bf0486e9b9e4e}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Yimeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=fe504e54ccd4f7e0e4e6401c5de77b9c}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Yifei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f9d225de07970367003ad924e865914f}
+      \strng{fullhash}{f9d225de07970367003ad924e865914f}
+      \strng{bibnamehash}{f9d225de07970367003ad924e865914f}
+      \strng{authorbibnamehash}{f9d225de07970367003ad924e865914f}
+      \strng{authornamehash}{f9d225de07970367003ad924e865914f}
+      \strng{authorfullhash}{f9d225de07970367003ad924e865914f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{pubstate}{submitted}
+      \field{title}{The Stellar-mass Dependence of Feedback-driven Outflows in DESI Star-forming Galaxies}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+      \keyw{major}
+    \endentry
+    \entry{zhou2026sotn007}{report}{maxbibnames=4,minbibnames=4}
+      \name{author}{8}{}{%
         {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
            family={Zhou},
            familyi={Z\bibinitperiod},
@@ -142,16 +178,49 @@
            familyi={J\bibinitperiod},
            given={Tesla},
            giveni={T\bibinitperiod}}}%
+        {{hash=4117e5780132f7552c8b458891c83d1c}{%
+           family={Linden},
+           familyi={L\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod},
+           prefix={von\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=470abf899b0a294c420cf74a9c441529}{%
+           family={Kelvin},
+           familyi={K\bibinitperiod},
+           given={Lee\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d290d4cb822f74c3bdf6d22f7d41d713}{%
+           family={Dell'Antonio},
+           familyi={D\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=0a0e438fc14ae5b0d053d402c3369d11}{%
+           family={Taranu},
+           familyi={T\bibinitperiod},
+           given={Dan\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=e2c15fbcafa4bb1ce39284a939e8ff12}{%
+           family={Englert},
+           familyi={E\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f61edd75d67be287d5356b68644a94aa}{%
+           family={Leauthaud},
+           familyi={L\bibinitperiod},
+           given={Alexie},
+           giveni={A\bibinitperiod}}}%
       }
       \list{institution}{1}{%
         {Vera C. Rubin Observatory}%
       }
-      \strng{namehash}{1b09e8bf5cf555a17bd5112a77584c8c}
-      \strng{fullhash}{1b09e8bf5cf555a17bd5112a77584c8c}
-      \strng{bibnamehash}{1b09e8bf5cf555a17bd5112a77584c8c}
-      \strng{authorbibnamehash}{1b09e8bf5cf555a17bd5112a77584c8c}
-      \strng{authornamehash}{1b09e8bf5cf555a17bd5112a77584c8c}
-      \strng{authorfullhash}{1b09e8bf5cf555a17bd5112a77584c8c}
+      \strng{namehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{fullhash}{098113a5309cae957bec739e9b76d1bf}
+      \strng{bibnamehash}{5547706d6351d26b46c312706790a526}
+      \strng{authorbibnamehash}{5547706d6351d26b46c312706790a526}
+      \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{authorfullhash}{098113a5309cae957bec739e9b76d1bf}
+      \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -679,7 +748,7 @@
       \strng{authorbibnamehash}{142b98223043794dbe1f2a2966e76d10}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{87b2a1e50cfd630837a88e3c07161afe}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -6127,7 +6196,7 @@
       \strng{authorbibnamehash}{5547706d6351d26b46c312706790a526}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{098113a5309cae957bec739e9b76d1bf}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -6802,7 +6871,7 @@
       \strng{authorbibnamehash}{ec909bfdc2033bedd2e2d5287e7bd2c9}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{4e7f4e9f0f5324b47a98cad3451792e3}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -7490,7 +7559,7 @@
       \strng{authorbibnamehash}{2764c565c7a41ffa34bfe36bdfb1f93f}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{0563539a1b67e2791912237de57e977a}
-      \field{extraname}{5}
+      \field{extraname}{6}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -8840,7 +8909,7 @@
       \strng{authorbibnamehash}{d22f30e8d55fbc6c49fcc3b33a190907}
       \strng{authornamehash}{25ae2dc7dfa6696d9db48d6546ef3107}
       \strng{authorfullhash}{bb682f367399efcf6326087fd552289e}
-      \field{extraname}{6}
+      \field{extraname}{7}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
