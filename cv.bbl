@@ -159,7 +159,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{pubstate}{submitted}
+      \field{note}{submitted to Astrophys. J. Lett.}
       \field{title}{The Stellar-mass Dependence of Feedback-driven Outflows in DESI Star-forming Galaxies}
       \field{year}{2026}
       \field{dateera}{ce}
@@ -611,6 +611,7 @@
       \field{eprintclass}{astro-ph.CO}
       \field{eprinttype}{arxiv}
       \field{month}{8}
+      \field{note}{submitted to Open J. Astrophys.}
       \field{title}{Cluster finding with outskirt stellar masses and percolation}
       \field{year}{2026}
       \field{dateera}{ce}
@@ -757,6 +758,7 @@
       \field{eprintclass}{astro-ph.CO}
       \field{eprinttype}{arxiv}
       \field{month}{6}
+      \field{note}{submitted to Astrophys. J.}
       \field{title}{Accurate Galaxy Cluster Shear and Mass Calibration for LSST with AnaCal}
       \field{year}{2026}
       \field{dateera}{ce}
