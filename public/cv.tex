@@ -22,6 +22,14 @@
 \documentclass{scrartcl}
 
 \usepackage[left=2.5cm,right=2.5cm,top=1.5cm,bottom=2.5cm]{geometry}
+% NHFP build (cv_nhfp.tex defines \NHFPBuild): the AO requires every material in at least
+% 12pt on 8.5x11in paper with 1in margins; the left margin leaves room for the date
+% marginpars so that no ink lands within 1in of the paper edge (72+10+133pt = left margin).
+\ifdefined\NHFPBuild
+  \KOMAoptions{fontsize=12pt}
+  % (the matching \geometry call is issued after classicthesis loads, since
+  %  classicthesis overrides the text block with \areaset at load time)
+\fi
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATION LISTS: rendered from publications.bib by biblatex + biber
@@ -30,7 +38,7 @@
 
 \usepackage[backend=biber, style=numeric, giveninits=true, maxbibnames=6, minbibnames=5,
             uniquename=false, uniquelist=false]{biblatex}
-\addbibresource{publications.bib}
+\addbibresource{../publications.bib}
 
 % Newest first; undated entries (in prep.) go on top
 \DeclareSortingTemplate{newestfirst}{
@@ -67,13 +75,18 @@
 % Students I advised get a dagger: put `author+an = {<author number>=student}` in their entry
 \renewcommand*{\mkbibcompletename}[1]{%
   \textsc{\ifmyname{\mkmyname{#1}}{#1}}\ifitemannotation{student}{\textsuperscript{\dag}}{}}
-\defbibnote{advisees}{\par\noindent\small\textsuperscript{\dag}\,\textsc{student advised}} % between heading and entries
+% Dagger legend, between heading and entries; prints once, under the first list that requests it
+\newtoggle{advnoteprinted}
+\defbibnote{advisees}{\iftoggle{advnoteprinted}{}{\global\toggletrue{advnoteprinted}%
+  \par\noindent% flush left, aligned with the section heading
+  \small\textsuperscript{\dag}\,\textsc{student advised or co-advised}}}
 
 % Entry layout:  Title
 %                <linked venue> [arXiv], note
 %                Authors
 \DeclareFieldFormat*{title}{#1}
 \DeclareFieldFormat{note}{\mkbibemph{#1}}
+\DeclareFieldFormat{addendum}{\mkbibemph{#1}} % like note, but only on the private CV
 \DefineBibliographyStrings{english}{inpreparation = {in prep\adddot}}
 \renewcommand*{\newunitpunct}{\addcomma\space}
 \renewcommand*{\finentrypunct}{}
@@ -108,11 +121,15 @@
 
 \newbibmacro*{cv:venue}{%
   \ifboolexpr{ test {\iffieldundef{journaltitle}} and test {\iffieldundef{eprint}} and test {\iffieldundef{type}} }
-    {}
+    {\ifboolexpr{ test {\ifdef{\ShowInPrep}} and not test {\iffieldundef{url}} }% private build: link the draft
+       {\printtext{\href{\thefield{url}}{draft}}}{}}
     {\printtext{\usebibmacro{cv:link}{\usebibmacro{cv:venue:text}}}}%
   \usebibmacro{cv:arxiv}%
   \newunit
-  \printfield{pubstate}}
+  % "in prep." would be redundant inside the private build's "Papers in Preparation" section
+  \ifboolexpr{ test {\ifdef{\ShowInPrep}} and test {\iffieldequalstr{pubstate}{inpreparation}} }
+    {}
+    {\printfield{pubstate}}}
 
 \newbibmacro*{cv:entry}{%
   \printfield{title}%
@@ -120,6 +137,7 @@
   \usebibmacro{cv:venue}%
   \newunit
   \printfield{note}%
+  \ifdef{\ShowInPrep}{\newunit\printfield{addendum}}{}% private-only note (e.g. "draft")
   \setunit{\newline}%
   \printnames{author}%
   \finentry}
@@ -135,8 +153,12 @@
 \renewcommand*{\bibfont}{\footnotesize}
 \usepackage{needspace}
 \defbibheading{cvpubs}{\needspace{6\baselineskip}\spacedlowsmallcaps{#1}\vspace{0.2em}}
-% Papers in preparation (pubstate = {inpreparation}) stay in publications.bib but are not listed
-\defbibcheck{noprep}{\iffieldequalstr{pubstate}{inpreparation}{\ifkeyword{cvprep}{}{\skipentry}}{}}
+% Papers in preparation (pubstate = {inpreparation}) stay in publications.bib.
+% Public build (cv.tex -> cv.pdf, served on zch.info): papers in preparation are hidden.
+% Private build (cv_private.tex -> cv_private.pdf, for applications): they appear in their own
+% "Science Publications in Preparation" section, after the technical publications.
+\defbibcheck{noprep}{\iffieldequalstr{pubstate}{inpreparation}{\skipentry}{}}
+\defbibcheck{onlyprep}{\iffieldequalstr{pubstate}{inpreparation}{}{\skipentry}}
 \BiblatexSplitbibDefernumbersWarningOff % numbering comes from enumerate, not biblatex
 
 % Journal macros used in NASA ADS BibTeX exports, as official ISO 4 abbreviations
@@ -160,12 +182,16 @@
 \usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
 \usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
 
-\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+% Section titles: larger and always flush with the text block (no paragraph indent)
+\let\origspacedlowsmallcaps\spacedlowsmallcaps
+\renewcommand{\spacedlowsmallcaps}[1]{\noindent{\large\origspacedlowsmallcaps{#1}}}
+
+\renewcommand{\cvheadingfont}{\LARGE\color{RoyalBlue}} % Font color of your name at the top
 
 \AtBeginDocument{\setlength{\marginparwidth}{82pt}} % Wide enough for "apr.2022--may.2025" on one line
 
 \usepackage{hyperref} % Required for adding links	and customizing them
-\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+\hypersetup{colorlinks, breaklinks, urlcolor=RoyalBlue, linkcolor=RoyalBlue} % Set link colors
 
 \newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
 
@@ -182,6 +208,24 @@
 \newcommand{\Description}[1]{{\interlinepenalty=10000\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par}\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here (interlinepenalty keeps each entry on one page)
 
 \newcommand{\Address}[1]{\hangindent=2em\hangafter=0\noindent \footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+% NHFP build: nothing below 12pt, so drop every \small/\footnotesize from the templates above
+\ifdefined\NHFPBuild
+  % left = 1in + marginparsep + marginparwidth; margin dates must stay >= 1in from the edge.
+  % At 68pt the longest dates (apr.2022--may.2025) wrap after the en-dash.
+  \geometry{letterpaper,top=1in,bottom=1in,right=1in,left=150pt,marginparwidth=68pt,marginparsep=10pt}
+  \renewcommand*{\bibfont}{\normalsize\raggedright\emergencystretch 3em} % wrap, don't overflow into the 1in margin
+  \renewcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape#1}}
+  \renewcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{#1}}\hspace{1.5em} #2 #3
+  \vspace{0.5em}}
+  \renewcommand{\others}[1]{\noindent\hangindent=2em\hangafter=0 #1
+  \vspace{0.5em}}
+  \renewcommand{\Description}[1]{{\interlinepenalty=10000\hangindent=2em\hangafter=0\noindent\raggedright{#1}\par}\vspace{1em}}
+  \renewcommand{\Address}[1]{\hangindent=2em\hangafter=0\noindent {#1}\par\vspace{1em}}
+  \defbibnote{advisees}{\iftoggle{advnoteprinted}{}{\global\toggletrue{advnoteprinted}%
+    \par\noindent\textsuperscript{\dag}\,\textsc{student advised or co-advised}}}
+  \AtBeginDocument{\setlength{\marginparwidth}{68pt}}
+\fi
 
 %----------------------------------------------------------------------------------------
 
@@ -251,21 +295,20 @@
     %	EDUCATION
     %----------------------------------------------------------------------------------------
 
-    \spacedlowsmallcaps{Education}\vspace{1em}\\
+    \spacedlowsmallcaps{Education}\vspace{1em}
+
     \School{University of California, Santa Cruz} \newline
     \Description{\MarginText{Expected 2027}Ph.D. in Physics \newline
-        Physics Department \newline
-        Thesis: \textit{TBD}\newline
+        Thesis: \textit{No Cluster Left Behind: Multiwavelength Cluster Analysis with All the Data}\newline
         Advisors: \textsc{Tesla E. Jeltema, Alexie S. Leauthaud}}
 
 
     \School{Duke University} \newline
     \Description{\MarginText{2020}B.A. in Physics with Highest Distinction\ \  \newline
-        Department of Physics \newline
         Thesis: \textit{Intrinsic Alignment of redMaPPer Clusters in the Dark Energy
             Survey}\newline
         % Description: This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.\newline
-        Committee:  \textsc{Michael A. Troxel}, \textsc{Christopher W. Walter}, \textsc{Robert L. Wolpert} }
+        Advisor: \textsc{Michael A. Troxel}}
 
     %------------------------------------------------
 
@@ -290,8 +333,15 @@
     \printbibliography[keyword=technical, check=noprep, heading=cvpubs, env=cvpubs,
                        title={Technical Publications with Major Contributions}]
 
+    \ifdef{\ShowInPrep}{% private build only; the public CV hides papers in preparation
+    \printbibliography[check=onlyprep, heading=cvpubs, env=cvpubs, prenote=advisees,
+                       title={Science Publications in Preparation}]}{}
+
     \printbibliography[keyword=contributing, check=noprep, heading=cvpubs, env=cvpubs,
                        title={Contributing Author Science Publications}]
+
+    \printbibliography[keyword=methodology, check=noprep, heading=cvpubs, env=cvpubs,
+                       title={Contributing Author Methodology Publications}]
 
     \vspace{1em} % Extra space between major sections
 
@@ -300,7 +350,7 @@
     %----------------------------------------------------------------------------------------
 
     \needspace{4\baselineskip} % keep the heading with its entry
-    \spacedlowsmallcaps{Funding}\vspace{1em}
+    \spacedlowsmallcaps{Competitive Funding}\vspace{1em}
 
     \Description{\MarginText{2026--2027}\textbf{Chancellor's Dissertation Year Fellowship}, UC Santa Cruz, \$33,000}
     \Description{\MarginText{2020}\textbf{Rodney I. McCormick Award}, Duke University, \$1,500}
@@ -309,6 +359,8 @@
 
     \spacedlowsmallcaps{Talks}\vspace{1em}
 
+    \Description{\MarginText{nov. 2026}\textbf{KIPAC, Stanford University and SLAC}, Tea Talk\newline
+        \textit{No Cluster Left Behind: Multiwavelength Cluster Analysis with All the Data}}
     \Description{\MarginText{oct. 2026}\textbf{Kavli IPMU, University of Tokyo}, Astro Seminar\newline
         \textit{No Cluster Left Behind: Multiwavelength Cluster Analysis with All the Data}}
     \Description{\MarginText{aug. 2026}\textbf{Tsinghua University}, Department of Astronomy Seminar\newline

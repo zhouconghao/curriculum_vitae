@@ -1,0 +1,17 @@
+# the private CV must never reach this public repository
+private/
+cv_private.*
+# LaTeX build artifacts
+*.aux
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+cv_dated.pdf
+cv_dated.bbl
+.DS_Store
+public/cv.pdf

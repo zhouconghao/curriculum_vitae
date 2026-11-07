@@ -19,44 +19,10 @@
 
 \refsection{0}
   \datalist[entry]{newestfirst/global//global/global}
-    \entry{steelberg2026lbcm}{unpublished}{}
-      \name{author}{3}{}{%
-        {{hash=78204d217cfd783c076bc32b838ac8a4}{%
-           family={Steelberg},
-           familyi={S\bibinitperiod},
-           given={Ethan\bibnamedelima K.},
-           giveni={E\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
-           family={Zhou},
-           familyi={Z\bibinitperiod},
-           given={Conghao},
-           giveni={C\bibinitperiod}}}%
-        {{hash=748b52fb2c596451893915f9c32c130c}{%
-           family={Jeltema},
-           familyi={J\bibinitperiod},
-           given={Tesla},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{25d93d154362afa60c91282614dfec1e}
-      \strng{fullhash}{25d93d154362afa60c91282614dfec1e}
-      \strng{bibnamehash}{25d93d154362afa60c91282614dfec1e}
-      \strng{authorbibnamehash}{25d93d154362afa60c91282614dfec1e}
-      \strng{authornamehash}{25d93d154362afa60c91282614dfec1e}
-      \strng{authorfullhash}{25d93d154362afa60c91282614dfec1e}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{pubstate}{inpreparation}
-      \field{title}{Constraints on Baryonification with DES Y3 $\times$ eRASS1 Clusters}
-      \true{nocite}
-      \keyw{major}
-      \annotation{item}{author}{default}{1}{}{0}{student}
-    \endentry
     \entry{zhou_prep_nocluster1}{unpublished}{}
       \true{moreauthor}
       \true{morelabelname}
-      \name{author}{4}{}{%
+      \name{author}{6}{}{%
         {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
            family={Zhou},
            familyi={Z\bibinitperiod},
@@ -67,23 +33,33 @@
            familyi={S\bibinitperiod},
            given={Andrés\bibnamedelima N.},
            giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=7537b8fdd27fca1b04f2cf3a8bd1b449}{%
-           family={Wu},
-           familyi={W\bibinitperiod},
-           given={Hao-Yi},
-           giveni={H\bibinithyphendelim Y\bibinitperiod}}}%
         {{hash=c68a3937a76a24c1cf2ca6c8f0261223}{%
            family={Grandis},
            familyi={G\bibinitperiod},
            given={Sebastian},
            giveni={S\bibinitperiod}}}%
+        {{hash=748b52fb2c596451893915f9c32c130c}{%
+           family={Jeltema},
+           familyi={J\bibinitperiod},
+           given={Tesla},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4ba1a0146f3fc098f36827d4b2c8680f}{%
+           family={Costanzi},
+           familyi={C\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8b11a831c1d6db20559eecb7f4ecfdf5}{%
+           family={Bleem},
+           familyi={B\bibinitperiod},
+           given={Lindsey},
+           giveni={L\bibinitperiod}}}%
       }
       \strng{namehash}{7bc92c1a0e1448e0964ffcdd752d783d}
-      \strng{fullhash}{55f3ae7e7fcb2e1e19f2fa88017c1e4e}
-      \strng{bibnamehash}{55f3ae7e7fcb2e1e19f2fa88017c1e4e}
-      \strng{authorbibnamehash}{55f3ae7e7fcb2e1e19f2fa88017c1e4e}
+      \strng{fullhash}{82fde128ff34d701fb3c1a3ca9f29647}
+      \strng{bibnamehash}{82fde128ff34d701fb3c1a3ca9f29647}
+      \strng{authorbibnamehash}{82fde128ff34d701fb3c1a3ca9f29647}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
-      \strng{authorfullhash}{55f3ae7e7fcb2e1e19f2fa88017c1e4e}
+      \strng{authorfullhash}{82fde128ff34d701fb3c1a3ca9f29647}
       \field{extraname}{1}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
@@ -93,6 +69,12 @@
       \field{pubstate}{inpreparation}
       \field{title}{No Cluster Left Behind I: Joint Mass Calibration for Dark Energy Survey and South Pole Telescope Clusters}
       \true{nocite}
+      \verb{urlraw}
+      \verb https://www.dropbox.com/scl/fi/d3nhupeguf7qfoqfl6jdh/nclb_1.pdf?rlkey=5lhdebu6r880xph14ksm1vf5a&st=t8wu2x07&dl=0
+      \endverb
+      \verb{url}
+      \verb https://www.dropbox.com/scl/fi/d3nhupeguf7qfoqfl6jdh/nclb_1.pdf?rlkey=5lhdebu6r880xph14ksm1vf5a&st=t8wu2x07&dl=0
+      \endverb
       \keyw{major,cvprep}
     \endentry
     \entry{zhou_prep_responsebias}{unpublished}{}
@@ -126,7 +108,318 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{pubstate}{inpreparation}
-      \field{title}{Response Bias in Shear Calibration}
+      \field{title}{Shear Response Clustering Bias from the Morphology--Density Relation}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.dropbox.com/scl/fi/05xmzcl6ncpdnf7rq1394/response_bias_zhou.pdf?rlkey=ksj7ewww7muobiwfj2vkfs4fg&dl=0
+      \endverb
+      \verb{url}
+      \verb https://www.dropbox.com/scl/fi/05xmzcl6ncpdnf7rq1394/response_bias_zhou.pdf?rlkey=ksj7ewww7muobiwfj2vkfs4fg&dl=0
+      \endverb
+      \keyw{major}
+    \endentry
+    \entry{steelberg2026lbcm}{unpublished}{}
+      \name{author}{4}{}{%
+        {{hash=6458b58c74281767364d1001a051d843}{%
+           family={Steelberg},
+           familyi={S\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=748b52fb2c596451893915f9c32c130c}{%
+           family={Jeltema},
+           familyi={J\bibinitperiod},
+           given={Tesla},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c68a3937a76a24c1cf2ca6c8f0261223}{%
+           family={Grandis},
+           familyi={G\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{037b5d341daa6a8a719d3e70e171aab6}
+      \strng{fullhash}{1e00d1854a569ce1fe8747a9961cefab}
+      \strng{bibnamehash}{1e00d1854a569ce1fe8747a9961cefab}
+      \strng{authorbibnamehash}{1e00d1854a569ce1fe8747a9961cefab}
+      \strng{authornamehash}{037b5d341daa6a8a719d3e70e171aab6}
+      \strng{authorfullhash}{1e00d1854a569ce1fe8747a9961cefab}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pubstate}{inpreparation}
+      \field{title}{Constraints on Baryonification with DES $\times$ {eROSITA} Clusters}
+      \true{nocite}
+      \keyw{major}
+      \annotation{item}{author}{default}{1}{}{0}{student}
+    \endentry
+    \entry{zhou_prep_sidm}{unpublished}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2d332ea167c6c58289038e3f40461398}{%
+           family={Ruan},
+           familyi={R\bibinitperiod},
+           given={Dilys},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f61edd75d67be287d5356b68644a94aa}{%
+           family={Leauthaud},
+           familyi={L\bibinitperiod},
+           given={Alexie},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9d5e1a7f976e2d58741f2d3c4ac5169a}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={Alyson},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{fullhash}{2bd9f52d9a93b208d626cbd946871481}
+      \strng{bibnamehash}{2bd9f52d9a93b208d626cbd946871481}
+      \strng{authorbibnamehash}{2bd9f52d9a93b208d626cbd946871481}
+      \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{authorfullhash}{2bd9f52d9a93b208d626cbd946871481}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pubstate}{inpreparation}
+      \field{title}{Joint {HI} + Lensing Constraints on {SIDM} from Merian, {DESI}, and {FASHI}}
+      \true{nocite}
+      \keyw{major}
+    \endentry
+    \entry{zhou_prep_rubintransfer}{unpublished}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{5}{}{%
+        {{hash=4fdf8da0769ad9e004976b74fb245990}{%
+           family={Nicols},
+           familyi={N\bibinitperiod},
+           given={Renee},
+           giveni={R\bibinitperiod}}}%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=eb82258a71229de9b963ba9ff2183b4e}{%
+           family={Ritz},
+           familyi={R\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod}}}%
+        {{hash=748b52fb2c596451893915f9c32c130c}{%
+           family={Jeltema},
+           familyi={J\bibinitperiod},
+           given={Tesla},
+           giveni={T\bibinitperiod}}}%
+        {{hash=71370d419b2539d8ba8e01635ca541f7}{%
+           family={Gibson},
+           familyi={G\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{d56ab7d078001852739f1910da552c5b}
+      \strng{fullhash}{a90749326cc2abe67a2b6737cc6ebb9c}
+      \strng{bibnamehash}{a90749326cc2abe67a2b6737cc6ebb9c}
+      \strng{authorbibnamehash}{a90749326cc2abe67a2b6737cc6ebb9c}
+      \strng{authornamehash}{d56ab7d078001852739f1910da552c5b}
+      \strng{authorfullhash}{a90749326cc2abe67a2b6737cc6ebb9c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pubstate}{inpreparation}
+      \field{title}{Measuring and Optimizing Rubin Survey Transfer Function for Low Surface Brightness Science: Stellar Haloes, Ultra-Diffuse Galaxy, and Tidal Features}
+      \true{nocite}
+      \keyw{major}
+    \endentry
+    \entry{zhou_prep_radialshmr}{unpublished}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f61edd75d67be287d5356b68644a94aa}{%
+           family={Leauthaud},
+           familyi={L\bibinitperiod},
+           given={Alexie},
+           giveni={A\bibinitperiod}}}%
+        {{hash=748b52fb2c596451893915f9c32c130c}{%
+           family={Jeltema},
+           familyi={J\bibinitperiod},
+           given={Tesla},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f300aafcc35c75152afb1a85de17d1e1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{fullhash}{a13a1201fdad7dd85d98d644804a1efc}
+      \strng{bibnamehash}{a13a1201fdad7dd85d98d644804a1efc}
+      \strng{authorbibnamehash}{a13a1201fdad7dd85d98d644804a1efc}
+      \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{authorfullhash}{a13a1201fdad7dd85d98d644804a1efc}
+      \field{extraname}{3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pubstate}{inpreparation}
+      \field{title}{Radially Dependent Stellar Mass to Halo Mass Relation from DESI Y1 Data}
+      \true{nocite}
+      \keyw{major}
+    \endentry
+    \entry{zhou_prep_meriandr2}{unpublished}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{6}{}{%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fe504e54ccd4f7e0e4e6401c5de77b9c}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Yifei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f61edd75d67be287d5356b68644a94aa}{%
+           family={Leauthaud},
+           familyi={L\bibinitperiod},
+           given={Alexie},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9791858d38163b9e77534590421a0f9c}{%
+           family={Greene},
+           familyi={G\bibinitperiod},
+           given={Jenny},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fb8517680c611940af3f29d4171b4e5c}{%
+           family={Danieli},
+           familyi={D\bibinitperiod},
+           given={Shany},
+           giveni={S\bibinitperiod}}}%
+        {{hash=470abf899b0a294c420cf74a9c441529}{%
+           family={Kelvin},
+           familyi={K\bibinitperiod},
+           given={Lee\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{fullhash}{0c226c859ffa895551102548a690130d}
+      \strng{bibnamehash}{0c226c859ffa895551102548a690130d}
+      \strng{authorbibnamehash}{0c226c859ffa895551102548a690130d}
+      \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{authorfullhash}{0c226c859ffa895551102548a690130d}
+      \field{extraname}{4}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pubstate}{inpreparation}
+      \field{title}{Second Data Release of the Merian Survey: Medium-Band-Selected Dwarf Photometry and Redshifts over 877 deg$^2$}
+      \true{nocite}
+      \keyw{major}
+    \endentry
+    \entry{zhou_prep_cellcoadds}{unpublished}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9b5de597a907481cfa763113d6504ff3}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Matthew\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a387449b0919c2c82ebd3bb3a5b42112}
+      \strng{fullhash}{a387449b0919c2c82ebd3bb3a5b42112}
+      \strng{bibnamehash}{a387449b0919c2c82ebd3bb3a5b42112}
+      \strng{authorbibnamehash}{a387449b0919c2c82ebd3bb3a5b42112}
+      \strng{authornamehash}{a387449b0919c2c82ebd3bb3a5b42112}
+      \strng{authorfullhash}{a387449b0919c2c82ebd3bb3a5b42112}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pubstate}{inpreparation}
+      \field{title}{Testing Survey Transfer Function Estimation from Rubin Cell-Based Coadds}
+      \true{nocite}
+      \keyw{major}
+    \endentry
+    \entry{wei2026legacyhalos}{unpublished}{}
+      \name{author}{8}{}{%
+        {{hash=8b94470f61ff9dfca1f313c6f1be2aab}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Leyao},
+           giveni={L\bibinitperiod}}}%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f61edd75d67be287d5356b68644a94aa}{%
+           family={Leauthaud},
+           familyi={L\bibinitperiod},
+           given={Alexie},
+           giveni={A\bibinitperiod}}}%
+        {{hash=748b52fb2c596451893915f9c32c130c}{%
+           family={Jeltema},
+           familyi={J\bibinitperiod},
+           given={Tesla},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9e6da10072b417e8dc486a073f5bc179}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Shuo},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9dc69dfeba7c29fd1ce84eb0ef6e11cc}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=9bd823f7e6b9809b930c6cf7d4caea1e}{%
+           family={Moustakas},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f300aafcc35c75152afb1a85de17d1e1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{03a438442ae3a17c447584cebb770e5e}
+      \strng{fullhash}{4a14cb0092343c7e341eb508b65baeb0}
+      \strng{bibnamehash}{278c107ecdbfe2dc4fbf280fa55e0615}
+      \strng{authorbibnamehash}{278c107ecdbfe2dc4fbf280fa55e0615}
+      \strng{authornamehash}{03a438442ae3a17c447584cebb770e5e}
+      \strng{authorfullhash}{4a14cb0092343c7e341eb508b65baeb0}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pubstate}{inpreparation}
+      \field{title}{The Value Added DESI-LegacyHalos DR1 Massive Galaxy Catalog}
       \true{nocite}
       \keyw{major}
     \endentry
@@ -158,13 +451,142 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{10}
+      \field{day}{2}
+      \field{eprinttype}{arxiv}
+      \field{month}{11}
       \field{note}{submitted to Astrophys. J. Lett.}
-      \field{title}{The Stellar-mass Dependence of Feedback-driven Outflows in DESI Star-forming Galaxies}
+      \field{title}{The Stellar-Mass Dependence of Feedback-Driven Outflows in DESI DR1 Star-Forming Galaxies}
       \field{year}{2026}
       \field{dateera}{ce}
       \true{nocite}
+      \verb{eprint}
+      \verb 2611.02580
+      \endverb
       \keyw{major}
+    \endentry
+    \entry{aguena2026clmm}{misc}{}
+      \name{author}{19}{}{%
+        {{hash=639d03b23af2056fbecfe18c8935ed22}{%
+           family={Aguena},
+           familyi={A\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=07d3ddf9329ee081183fb2b77de40afd}{%
+           family={Combet},
+           familyi={C\bibinitperiod},
+           given={Céline},
+           giveni={C\bibinitperiod}}}%
+        {{hash=508e67ffed5f4e8db89154c386bf625a}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Shenming},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ac038ff29aa2c6af09a1b839d4d11982}{%
+           family={Payerne},
+           familyi={P\bibinitperiod},
+           given={Constantin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e95c0ca310f1d671d6df384df51ab0d9}{%
+           family={Ricci},
+           familyi={R\bibinitperiod},
+           given={Marina},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fa8fba471bf77d6721974dbef7b22349}{%
+           family={Avestruz},
+           familyi={A\bibinitperiod},
+           given={Camille},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6229e1926f9599e2fdf184e42d1132ca}{%
+           family={Barroso},
+           familyi={B\bibinitperiod},
+           given={Eduardo},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8a80344b2e5e9c954cdad763ff119514}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Caio},
+           giveni={C\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ba8e66da3ab91a0b99d69d3e80931f20}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Hsin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d4077a106ca465726814d5dd1ca8ca02}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Calum},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8eafdc7b9b7fa08ab050693f2cf297cb}{%
+           family={Niemiec},
+           familyi={N\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c293ca0c034037c8f1ba93226ade2638}{%
+           family={Sarcevic},
+           familyi={S\bibinitperiod},
+           given={Nikolina},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3fe6233eb024562699e96d56d634cf7e}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Tae-hyeon},
+           giveni={T\bibinithyphendelim h\bibinitperiod}}}%
+        {{hash=a35ca80cdd0612e301a951b440a3e8cb}{%
+           family={Solomon},
+           familyi={S\bibinitperiod},
+           given={Rance},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c0acf024bc5c1a852c75cce4697bba71}{%
+           family={Srinivasan},
+           familyi={S\bibinitperiod},
+           given={Radhakrishnan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9454f6835adb910b4dc16ea8618e2f4b}{%
+           family={Sunayama},
+           familyi={S\bibinitperiod},
+           given={Tomomi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9af03dc3de9564c69ac3b85892ee8644}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yuanyuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e4a71dc34f07611d1ec66e634e459aa6}{%
+           family={Zuntz},
+           familyi={Z\bibinitperiod},
+           given={Joe},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3623499ac2039e68e56f38038a324736}
+      \strng{fullhash}{735b32da1c2e2bf4bde634f821c85216}
+      \strng{bibnamehash}{7b8b5d324c470a500b64de2d7feea6e9}
+      \strng{authorbibnamehash}{7b8b5d324c470a500b64de2d7feea6e9}
+      \strng{authornamehash}{3623499ac2039e68e56f38038a324736}
+      \strng{authorfullhash}{735b32da1c2e2bf4bde634f821c85216}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arxiv}
+      \field{month}{10}
+      \field{title}{Getting Ready For Analysing Rubin Data: {CLMM} v2, The Updated {LSST-DESC} Cluster Weak Lensing Mass Modeling Library For Cosmology}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2610.37455
+      \endverb
+      \keyw{methodology}
     \endentry
     \entry{zhou2026sotn007}{report}{maxbibnames=4,minbibnames=4}
       \name{author}{8}{}{%
@@ -220,14 +642,14 @@
       \strng{authorbibnamehash}{5547706d6351d26b46c312706790a526}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{098113a5309cae957bec739e9b76d1bf}
-      \field{extraname}{2}
+      \field{extraname}{5}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{addendum}{draft}
       \field{day}{15}
       \field{month}{10}
-      \field{note}{draft}
       \field{number}{SOTN-007}
       \field{title}{Surface brightness profiles around massive galaxies from LSSTCam coadds}
       \field{type}{LSST Technote}
@@ -622,7 +1044,7 @@
       \keyw{major}
       \annotation{item}{author}{default}{1}{}{0}{student}
     \endentry
-    \entry{farahi2026oasis}{misc}{maxbibnames=1,minbibnames=1}
+    \entry{farahi2026oasis}{misc}{}
       \name{author}{3}{}{%
         {{hash=a65f7ff744a6bb75a97f0fa38914e8eb}{%
            family={Farahi},
@@ -642,8 +1064,8 @@
       }
       \strng{namehash}{4776a54ac1c53360d792108ad2357cf9}
       \strng{fullhash}{4776a54ac1c53360d792108ad2357cf9}
-      \strng{bibnamehash}{5ab049a461889b07108a571ebe47e005}
-      \strng{authorbibnamehash}{5ab049a461889b07108a571ebe47e005}
+      \strng{bibnamehash}{4776a54ac1c53360d792108ad2357cf9}
+      \strng{authorbibnamehash}{4776a54ac1c53360d792108ad2357cf9}
       \strng{authornamehash}{4776a54ac1c53360d792108ad2357cf9}
       \strng{authorfullhash}{4776a54ac1c53360d792108ad2357cf9}
       \field{sortinit}{2}
@@ -661,7 +1083,7 @@
       \verb{eprint}
       \verb 2606.22572
       \endverb
-      \keyw{contributing}
+      \keyw{methodology}
     \endentry
     \entry{zhou2026anacal}{misc}{maxbibnames=2,minbibnames=2}
       \name{author}{15}{}{%
@@ -749,7 +1171,7 @@
       \strng{authorbibnamehash}{142b98223043794dbe1f2a2966e76d10}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{87b2a1e50cfd630837a88e3c07161afe}
-      \field{extraname}{3}
+      \field{extraname}{6}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -6198,7 +6620,7 @@
       \strng{authorbibnamehash}{5547706d6351d26b46c312706790a526}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{098113a5309cae957bec739e9b76d1bf}
-      \field{extraname}{4}
+      \field{extraname}{7}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -6873,7 +7295,7 @@
       \strng{authorbibnamehash}{ec909bfdc2033bedd2e2d5287e7bd2c9}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{4e7f4e9f0f5324b47a98cad3451792e3}
-      \field{extraname}{5}
+      \field{extraname}{8}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -7561,7 +7983,7 @@
       \strng{authorbibnamehash}{2764c565c7a41ffa34bfe36bdfb1f93f}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{0563539a1b67e2791912237de57e977a}
-      \field{extraname}{6}
+      \field{extraname}{9}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -8147,7 +8569,7 @@
       \endverb
       \keyw{contributing}
     \endentry
-    \entry{aguena2023building}{misc}{maxbibnames=1,minbibnames=1}
+    \entry{aguena2023building}{misc}{}
       \name{author}{63}{}{%
         {{hash=cff701d30e6714527c1bdffb5ce3a1f7}{%
            family={Aguena},
@@ -8469,10 +8891,11 @@
       }
       \strng{namehash}{a5dbca581fdfc8e663fc9601f4f91b50}
       \strng{fullhash}{3d0e5c925d09b62d4def2b825148a579}
-      \strng{bibnamehash}{a5dbca581fdfc8e663fc9601f4f91b50}
-      \strng{authorbibnamehash}{a5dbca581fdfc8e663fc9601f4f91b50}
+      \strng{bibnamehash}{2a8a1db3d6322cf94bc29a21f73df87f}
+      \strng{authorbibnamehash}{2a8a1db3d6322cf94bc29a21f73df87f}
       \strng{authornamehash}{a5dbca581fdfc8e663fc9601f4f91b50}
       \strng{authorfullhash}{3d0e5c925d09b62d4def2b825148a579}
+      \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -8488,7 +8911,7 @@
       \verb{eprint}
       \verb 2309.06593
       \endverb
-      \keyw{contributing}
+      \keyw{methodology}
     \endentry
     \entry{zhou2023intrinsic}{article}{}
       \name{author}{82}{}{%
@@ -8911,7 +9334,7 @@
       \strng{authorbibnamehash}{d22f30e8d55fbc6c49fcc3b33a190907}
       \strng{authornamehash}{25ae2dc7dfa6696d9db48d6546ef3107}
       \strng{authorfullhash}{bb682f367399efcf6326087fd552289e}
-      \field{extraname}{7}
+      \field{extraname}{10}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
