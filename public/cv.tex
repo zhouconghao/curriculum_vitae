@@ -51,11 +51,13 @@
 }
 \ExecuteBibliographyOptions{sorting=newestfirst}
 
-% Contributing-author papers show only the first author ("A. Smith et al.")
+% Contributing-author papers show only the first author ("A. Smith et al."),
+% unless I am one of the first three authors. Those list the authors as in the other sections.
 \DeclareSourcemap{
   \maps[datatype=bibtex]{
     \map{
       \step[fieldsource=keywords, match=\regexp{contributing}, final]
+      \step[fieldsource=author, notmatch=\regexp{(?s)\A\s*(?:(?:(?!\s+and\s).)+\s+and\s+){0,2}Zhou,\s*C}, final]
       \step[fieldset=options, fieldvalue={maxbibnames=1, minbibnames=1}]
     }
   }
@@ -461,6 +463,14 @@
     % \Description{\MarginText{2022 Spring}I am a member of a team at UC Santa Cruz dedicated to broaden the impact of physics research and serve the underprivledged communities in physics.}
 
     %----------------------------------------------------------------------------------------
+
+    \vspace{1em}
+
+    \needspace{4\baselineskip} % keep the heading with its entry
+    \spacedlowsmallcaps{Media Coverage}\vspace{1em}
+
+    \Description{\MarginText{mar. 2025}\textbf{Astrobites}, Daily Paper Summary of Zhou et al.\ 2024 (Phys.\ Rev.\ D)\newline
+        \textit{\href{https://astrobites.org/2025/03/29/cluster-lens-debias/}{Less than meets the eye: measuring the bias in galaxy cluster observations}}}
 
     \vspace{1em}
 

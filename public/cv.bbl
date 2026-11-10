@@ -423,6 +423,58 @@
       \true{nocite}
       \keyw{major}
     \endentry
+    \entry{xu2026fossil}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=9e6da10072b417e8dc486a073f5bc179}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Shuo},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f300aafcc35c75152afb1a85de17d1e1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod}}}%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f61edd75d67be287d5356b68644a94aa}{%
+           family={Leauthaud},
+           familyi={L\bibinitperiod},
+           given={Alexie},
+           giveni={A\bibinitperiod}}}%
+        {{hash=125d667ebf995c91d1e54b991089effa}{%
+           family={Diemer},
+           familyi={D\bibinitperiod},
+           given={Benedikt},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{15aea2c2d4d7c6174c338ff492f98775}
+      \strng{fullhash}{9927c3dfce372f1fa9c0489bd419c856}
+      \strng{bibnamehash}{9927c3dfce372f1fa9c0489bd419c856}
+      \strng{authorbibnamehash}{9927c3dfce372f1fa9c0489bd419c856}
+      \strng{authornamehash}{15aea2c2d4d7c6174c338ff492f98775}
+      \strng{authorfullhash}{9927c3dfce372f1fa9c0489bd419c856}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{9}
+      \field{eprintclass}{astro-ph.GA}
+      \field{eprinttype}{arxiv}
+      \field{month}{11}
+      \field{title}{The Connection between Halo Assembly History and the Stellar Distribution II: A Radially Stratified Fossil Record of Past Halo Mass}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2611.12470
+      \endverb
+      \keyw{contributing}
+    \endentry
     \entry{tang2026outflows}{unpublished}{}
       \name{author}{3}{}{%
         {{hash=7a799eb929e1ccf4254bf0486e9b9e4e}{%
@@ -877,7 +929,7 @@
       \strng{authorbibnamehash}{15aea2c2d4d7c6174c338ff492f98775}
       \strng{authornamehash}{15aea2c2d4d7c6174c338ff492f98775}
       \strng{authorfullhash}{129d6748d1a37fedccb2756e5d94a322}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -7366,7 +7418,7 @@
       \strng{authorbibnamehash}{15aea2c2d4d7c6174c338ff492f98775}
       \strng{authornamehash}{15aea2c2d4d7c6174c338ff492f98775}
       \strng{authorfullhash}{090e9a5dbb72fae3c2b00f314162a820}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
