@@ -257,6 +257,9 @@
 
     \NewEntry{website}{\href{http://zch.info}{https://zch.info}} % Personal website
 
+    % Shown only by builds that set \Citizenship (private/cv_ipmu.tex); the public CV omits it
+    \ifdefvoid{\Citizenship}{}{\NewEntry{citizenship}{\Citizenship}}
+
     % \NewEntry{phone}{(H) +1 (000) 111 1111\ \ $\cdotp$\ \ (M) +1 (000) 111 1112} % Phone number(s)
 
     \vspace{1em} % Extra white space between the personal information section and goal
@@ -388,6 +391,7 @@
     \Description{\MarginText{oct. 2023}\textbf{Stony Brook University \& Brookhaven National Lab}, Cosmology Seminar\newline
         \textit{Constraining Optical Selection Bias in Cluster Lensing w/ Multiwavelength Data}}
 
+    \needspace{6\baselineskip} % keep the heading with its entries
     \spacedlowsmallcaps{Observing Experience}\vspace{1em}
 
     \Description{\MarginText{10.5  effective nights}Dark Energy Spectroscopic Instrument, Mayall 4m at Kitt Peak}
@@ -452,6 +456,7 @@
 
     \vspace{1em}
 
+    \needspace{8\baselineskip} % keep this short section on one page
     \spacedlowsmallcaps{Outreach}\vspace{1em}
 
     \Description{\MarginText{2023--2024}Starlight Over Street Light}

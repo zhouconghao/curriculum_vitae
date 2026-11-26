@@ -19,64 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{newestfirst/global//global/global}
-    \entry{zhou_prep_nocluster1}{unpublished}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{6}{}{%
-        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
-           family={Zhou},
-           familyi={Z\bibinitperiod},
-           given={Conghao},
-           giveni={C\bibinitperiod}}}%
-        {{hash=72e66b3267f51dfca766cad7bc864b25}{%
-           family={Salcedo},
-           familyi={S\bibinitperiod},
-           given={Andrés\bibnamedelima N.},
-           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=c68a3937a76a24c1cf2ca6c8f0261223}{%
-           family={Grandis},
-           familyi={G\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod}}}%
-        {{hash=748b52fb2c596451893915f9c32c130c}{%
-           family={Jeltema},
-           familyi={J\bibinitperiod},
-           given={Tesla},
-           giveni={T\bibinitperiod}}}%
-        {{hash=4ba1a0146f3fc098f36827d4b2c8680f}{%
-           family={Costanzi},
-           familyi={C\bibinitperiod},
-           given={Matteo},
-           giveni={M\bibinitperiod}}}%
-        {{hash=8b11a831c1d6db20559eecb7f4ecfdf5}{%
-           family={Bleem},
-           familyi={B\bibinitperiod},
-           given={Lindsey},
-           giveni={L\bibinitperiod}}}%
-      }
-      \strng{namehash}{7bc92c1a0e1448e0964ffcdd752d783d}
-      \strng{fullhash}{82fde128ff34d701fb3c1a3ca9f29647}
-      \strng{bibnamehash}{82fde128ff34d701fb3c1a3ca9f29647}
-      \strng{authorbibnamehash}{82fde128ff34d701fb3c1a3ca9f29647}
-      \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
-      \strng{authorfullhash}{82fde128ff34d701fb3c1a3ca9f29647}
-      \field{extraname}{1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{in DES and SPT collaboration-wide review}
-      \field{pubstate}{inpreparation}
-      \field{title}{No Cluster Left Behind I: Joint Mass Calibration for Dark Energy Survey and South Pole Telescope Clusters}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.dropbox.com/scl/fi/d3nhupeguf7qfoqfl6jdh/nclb_1.pdf?rlkey=5lhdebu6r880xph14ksm1vf5a&st=t8wu2x07&dl=0
-      \endverb
-      \verb{url}
-      \verb https://www.dropbox.com/scl/fi/d3nhupeguf7qfoqfl6jdh/nclb_1.pdf?rlkey=5lhdebu6r880xph14ksm1vf5a&st=t8wu2x07&dl=0
-      \endverb
-      \keyw{major,cvprep}
-    \endentry
     \entry{zhou_prep_responsebias}{unpublished}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -188,7 +130,7 @@
       \strng{authorbibnamehash}{2bd9f52d9a93b208d626cbd946871481}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{2bd9f52d9a93b208d626cbd946871481}
-      \field{extraname}{2}
+      \field{extraname}{1}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
@@ -274,13 +216,48 @@
       \strng{authorbibnamehash}{a13a1201fdad7dd85d98d644804a1efc}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{a13a1201fdad7dd85d98d644804a1efc}
-      \field{extraname}{3}
+      \field{extraname}{2}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{pubstate}{inpreparation}
       \field{title}{Radially Dependent Stellar Mass to Halo Mass Relation from DESI Y1 Data}
+      \true{nocite}
+      \keyw{major}
+    \endentry
+    \entry{zhou_prep_rubinlsbg}{unpublished}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=7a799eb929e1ccf4254bf0486e9b9e4e}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Yimeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=fe504e54ccd4f7e0e4e6401c5de77b9c}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Yifei},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{a30d1d4b5a0d1e70275e7543e8e55aba}
+      \strng{fullhash}{a30d1d4b5a0d1e70275e7543e8e55aba}
+      \strng{bibnamehash}{a30d1d4b5a0d1e70275e7543e8e55aba}
+      \strng{authorbibnamehash}{a30d1d4b5a0d1e70275e7543e8e55aba}
+      \strng{authornamehash}{a30d1d4b5a0d1e70275e7543e8e55aba}
+      \strng{authorfullhash}{a30d1d4b5a0d1e70275e7543e8e55aba}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pubstate}{inpreparation}
+      \field{title}{Rubin Foundation Low Surface Brightness Galaxy Catalog: High Purity {LSBGs} from Rubin {DP2}}
       \true{nocite}
       \keyw{major}
     \endentry
@@ -325,7 +302,7 @@
       \strng{authorbibnamehash}{0c226c859ffa895551102548a690130d}
       \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
       \strng{authorfullhash}{0c226c859ffa895551102548a690130d}
-      \field{extraname}{4}
+      \field{extraname}{3}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
@@ -421,6 +398,66 @@
       \field{pubstate}{inpreparation}
       \field{title}{The Value Added DESI-LegacyHalos DR1 Massive Galaxy Catalog}
       \true{nocite}
+      \keyw{major}
+    \endentry
+    \entry{zhou_prep_nocluster1}{misc}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{6}{}{%
+        {{hash=806ddb300b1047f625fa4adf13e00ba9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Conghao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=72e66b3267f51dfca766cad7bc864b25}{%
+           family={Salcedo},
+           familyi={S\bibinitperiod},
+           given={Andrés\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=c68a3937a76a24c1cf2ca6c8f0261223}{%
+           family={Grandis},
+           familyi={G\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=748b52fb2c596451893915f9c32c130c}{%
+           family={Jeltema},
+           familyi={J\bibinitperiod},
+           given={Tesla},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4ba1a0146f3fc098f36827d4b2c8680f}{%
+           family={Costanzi},
+           familyi={C\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8b11a831c1d6db20559eecb7f4ecfdf5}{%
+           family={Bleem},
+           familyi={B\bibinitperiod},
+           given={Lindsey},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{fullhash}{82fde128ff34d701fb3c1a3ca9f29647}
+      \strng{bibnamehash}{82fde128ff34d701fb3c1a3ca9f29647}
+      \strng{authorbibnamehash}{82fde128ff34d701fb3c1a3ca9f29647}
+      \strng{authornamehash}{7bc92c1a0e1448e0964ffcdd752d783d}
+      \strng{authorfullhash}{82fde128ff34d701fb3c1a3ca9f29647}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arxiv}
+      \field{month}{11}
+      \field{note}{submitted to Phys. Rev. D}
+      \field{title}{No Cluster Left Behind I: Joint Mass Calibration for Dark Energy Survey and South Pole Telescope Clusters}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2611.33522
+      \endverb
       \keyw{major}
     \endentry
     \entry{xu2026fossil}{misc}{}
