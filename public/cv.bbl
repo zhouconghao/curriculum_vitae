@@ -512,7 +512,7 @@
       \endverb
       \keyw{contributing}
     \endentry
-    \entry{tang2026outflows}{unpublished}{}
+    \entry{tang2026outflows}{article}{}
       \name{author}{3}{}{%
         {{hash=7a799eb929e1ccf4254bf0486e9b9e4e}{%
            family={Tang},
@@ -542,8 +542,10 @@
       \field{labeltitlesource}{title}
       \field{day}{2}
       \field{eprinttype}{arxiv}
+      \field{journaltitle}{The Astrophysical Journal Letters}
       \field{month}{11}
-      \field{note}{submitted to Astrophys. J. Lett.}
+      \field{pubstate}{inpress}
+      \field{shortjournal}{Astrophys. J. Lett.}
       \field{title}{The Stellar-Mass Dependence of Feedback-Driven Outflows in DESI DR1 Star-Forming Galaxies}
       \field{year}{2026}
       \field{dateera}{ce}
